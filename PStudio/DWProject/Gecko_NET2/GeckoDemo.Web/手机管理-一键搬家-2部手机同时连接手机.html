@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>手机管理-一键搬家-未连接手机</title>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+  <link href="css/base.css" rel="stylesheet" type="text/css" />
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <link href="css/model.css" rel="stylesheet" type="text/css" />
+  <style>
+#manage_move_32{padding: 60px 20px 20px 20px;font-family: "微软雅黑","宋体";}
+#manage_move_32 .left{width: 230px;float: left;}
+#manage_move_32 .left .phone_img{height: 410px;background: url(images/220x402x63.png) center center no-repeat;position: relative;}
+#manage_move_32 .center{width: 300px;float: left;}
+#manage_move_32 .center .img{height: 410px;background: url(images/292x76x61.png) center center no-repeat;margin-top: 0px;font-weight: bold;}
+#manage_move_32 .center .img .p1{height: 30px;line-height: 30px;text-align: center;color: #ff8400;padding-top: 270px;font-size: 14px;}
+#manage_move_32 .center .img .p2 a{display: block;height: 28px;width: 98px;border-radius: 3px;line-height: 28px;text-align: center;border: 1px solid #DBDBDB;font-weight: 100;font-size: 14px;font-family: "微软雅黑","宋体";color: #999;background: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#f1f1f1));background: -moz-linear-gradient( top,#f9f9f9,#f1f1f1);margin-left: 100px;margin-top: 10px;}
+#manage_move_32 .center .img .p2 a:hover{background: -webkit-gradient(linear, 0 0, 0 100%, from(#70c139), to(#41a71c)); background: -moz-linear-gradient( top,#70c139,#41a71c);color: #fff;border: 1px solid #2e931c;}
+#manage_move_32 .center .bottom{margin-top: 20px;}
+/*#manage_move_32 .center .bottom a{width: 130px;height: 40px;background: -webkit-gradient(linear, 0 0, 0 100%, from(#70c139), to(#41a71c)); background: -moz-linear-gradient( top,#70c139,#41a71c);color: #fff;border: 1px solid #2e931c;border-radius: 20px;display: block;float: left;line-height: 40px;font-size: 14px;}*/
+#manage_move_32 .center .bottom a { width: 130px; height: 40px; background: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#dfdfdf)); background: -moz-linear-gradient( top,#ededed,#dfdfdf);  color: #aaa; border: 1px solid #d8d8d8; border-radius: 20px; display: block; float: left; line-height: 40px; font-size: 14px; }
+#manage_move_32 .center .bottom a:hover { background: -webkit-gradient(linear, 0 0, 0 100%, from(#70c139), to(#41a71c)); background: -moz-linear-gradient( top,#70c139,#41a71c); color: #fff; border: 1px solid #2e931c; }
+
+#manage_move_32 .right{width: 230px;float: left;}
+#manage_move_32 .right .phone_img{height: 410px;background: url(images/220x402x64.png) center center no-repeat;position: relative;}
+#manage_move_32 .right .phone_img>ul{position: absolute;top: 44px;left: 28px;}
+#manage_move_32 .right .phone_img>ul li{line-height: 43px;height: 43px;border-bottom: 1px solid #7f8487;display: block;width: 176px;font-size: 12px;color: #bec1c4;}
+#manage_move_32 .right .phone_img>ul li.last{border-bottom: none;}
+#manage_move_32 .right .phone_img>ul li .sp1{padding-left: 25px;background: url(images/14x14x64.png) left center no-repeat;margin-left: 12px;}
+#manage_move_32 .right .phone_img>ul li .sp21{padding-left: 25px;background: url(images/14x14x61.png) left center no-repeat;margin-left: 10px;opacity: .7}
+#manage_move_32 .right .phone_img>ul li .sp22{padding-left: 25px;background: url(images/15x11x61.png) left center no-repeat;margin-left: 10px;opacity: .7}
+#manage_move_32 .right .phone_img>ul li .sp23{padding-left: 25px;background: url(images/14x10x61.png) left center no-repeat;margin-left: 10px;opacity: .7}
+#manage_move_32 .right .phone_img>ul li .sp24{padding-left: 25px;background: url(images/14x14x62.png) left center no-repeat;margin-left: 10px;opacity: .7}
+#manage_move_32 .right .phone_img>ul li .sp25{padding-left: 25px;background: url(images/12x14x61.png) left center no-repeat;margin-left: 10px;opacity: .7}
+#manage_move_32 .right .phone_img>ul li .sp26{padding-left: 25px;background: url(images/11x10x61.png) left center no-repeat;margin-left: 10px;opacity: .7}
+#manage_move_32 .right .phone_img>ul li .sp27{padding-left: 25px;background: url(images/14x14x63.png) left center no-repeat;margin-left: 10px;opacity: .7}
+
+#manage_move_32 .left .phone_img>ul{position: absolute;top: 44px;left: 26px;}
+#manage_move_32 .left .phone_img>ul li{line-height: 43px;height: 43px;border-bottom: 1px solid #475054;display: block;width: 176px;font-size: 12px;color: #bec1c4;}
+#manage_move_32 .left .phone_img>ul li.last{border-bottom: none;}
+#manage_move_32 .left .phone_img>ul li .sp1{padding-left: 25px;background: url(images/14x14x64.png) left center no-repeat;margin-left: 12px;}
+#manage_move_32 .left .phone_img>ul li .sp21{padding-left: 25px;background: url(images/14x14x61.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left .phone_img>ul li .sp22{padding-left: 25px;background: url(images/15x11x61.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left .phone_img>ul li .sp23{padding-left: 25px;background: url(images/14x10x61.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left .phone_img>ul li .sp24{padding-left: 25px;background: url(images/14x14x62.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left .phone_img>ul li .sp25{padding-left: 25px;background: url(images/12x14x61.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left .phone_img>ul li .sp26{padding-left: 25px;background: url(images/11x10x61.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left .phone_img>ul li .sp27{padding-left: 25px;background: url(images/14x14x63.png) left center no-repeat;margin-left: 10px;}
+#manage_move_32 .left>p, #manage_move_32 .right>p{height: 40px;overflow: hidden;line-height: 40px;color: #777;font-size: 14px;padding-left: 25px;margin-left: 25px;}
+#manage_move_32 .left>p {background: url(images/18x24x61.png) left center no-repeat;}
+#manage_move_32 .right>p {background: url(images/18x24x61.png) left center no-repeat;}
+#manage_move_32 .left>p span, #manage_move_32 .right>p span{display: inline-block;margin-left: 15px;}
+  </style>
+<script>
+  // $("#manage_move_32 .left p.phone_control span").hover(function(){$(this).css("opacity","1")},function(){$(this).css("opacity","0.5")})
+</script>
+</head>
+<body>
+  <div style="" class="main">
+    <div class="fl main_left">
+      <h4 class="on">我的手机</h4>
+      <div class="content_2 content box">
+        <dl>
+          <dt style="" class="f14b">
+            <a style="">手机应用</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">升级应用</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">我的应用</a>
+              </li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">本地资源</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">最近导入</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">我的收藏</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">电脑资源</a>
+              </li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">最近下载</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">应用</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">音乐</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">阅读</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">动漫</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">视频</a>
+              </li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">工具箱</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="fr main_right content_2 content">
+      <div id="manage_move_32">
+        <div class="left">
+          <div class="phone_img">
+           </div>
+        </div>
+        <div class="center">
+          <div class="img">
+            <p class="p1">您还未连接手机？赶紧连接手机来体验下吧！</p>
+          </div>
+          <div class="bottom">
+            <p class="t-center"><a class="opacity08" href="">备份/还原</a><a class="opacity08 ml30" href="">双机搬家</a></p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="phone_img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/model.js"></script>

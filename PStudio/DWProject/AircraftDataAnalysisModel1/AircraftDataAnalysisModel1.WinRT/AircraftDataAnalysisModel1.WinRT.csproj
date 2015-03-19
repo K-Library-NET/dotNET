@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B90D4B7-7C64-47F5-8C17-5105D5A7BAAD}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AircraftDataAnalysisModel1.WinRT</RootNamespace>
+    <AssemblyName>AircraftDataAnalysisModel1.WinRT</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>AircraftDataAnalysisModel1.WinRT_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Folder Include="Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationContext.cs" />
+    <Compile Include="Common\DataPointToBrushConverter.cs" />
+    <Compile Include="Common\DecisionWrap.cs" />
+    <Compile Include="Common\NavigationHelper.cs" />
+    <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="DataModel\AddFileViewModel.cs" />
+    <Compile Include="DataModel\FaultDiagAnalysisViewModel.cs" />
+    <Compile Include="DataModel\FlightAnalysisSubSwitchChartViewModel.cs" />
+    <Compile Include="DataModel\DataCommon.cs" />
+    <Compile Include="DataModel\DecisionRecordFlightAnalysisViewModel.cs" />
+    <Compile Include="DataModel\EngineMonitoringViewModel.cs" />
+    <Compile Include="DataModel\FlightAnalysisSubLiteViewModel.cs" />
+    <Compile Include="DataModel\ExtremumReportViewModel.cs" />
+    <Compile Include="DataModel\FaultDiagnosisViewModel.cs" />
+    <Compile Include="DataModel\FlightAnalysisChartGroupSubExtendedViewModel.cs" />
+    <Compile Include="DataModel\FlightAnalysisChartGroupViewModel.cs" />
+    <Compile Include="DataModel\FlightAnalysisSubViewModel.cs" />
+    <Compile Include="DataModel\FlightAnalysisSubViewModelFactory.cs" />
+    <Compile Include="DataModel\FlightAnalysisViewModel.cs" />
+    <Compile Include="DataModel\FlightDateTreeViewModel.cs" />
+    <Compile Include="DataModel\IGroupVisibleObserver.cs" />
+    <Compile Include="DataModel\RawDataPointViewModel.cs" />
+    <Compile Include="DataModel\StatReportDataViewModel.cs" />
+    <Compile Include="DataModel\StatReportSelectViewModel.cs" />
+    <Compile Include="DataModel\StatReportViewModel.cs" />
+    <Compile Include="DataModel\TestModelDataSource.cs" />
+    <Compile Include="DataModel\TrendAnalysisItem.cs" />
+    <Compile Include="Domain\AircraftAnalysisDataLoader.cs" />
+    <Compile Include="Domain\EngineMonitoring.xaml.cs">
+      <DependentUpon>EngineMonitoring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\ExtremumReport.xaml.cs">
+      <DependentUpon>ExtremumReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FaultDiagAnalysis.xaml.cs">
+      <DependentUpon>FaultDiagAnalysis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FaultDiagnosis.xaml.cs">
+      <DependentUpon>FaultDiagnosis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FlightAnalysis.xaml.cs">
+      <DependentUpon>FlightAnalysis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FlightAnalysisSub.xaml.cs">
+      <DependentUpon>FlightAnalysisSub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\FlightAnalysisViewModelOld.cs" />
+    <Compile Include="Domain\FlightAnalysisSubLite.xaml.cs">
+      <DependentUpon>FlightAnalysisSubLite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\IDataLoaderNavigator.cs" />
+    <Compile Include="Domain\ImportAircraftBatchConfirm.xaml.cs">
+      <DependentUpon>ImportAircraftBatchConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\ImportLoadConfirmPage.xaml.cs">
+      <DependentUpon>ImportLoadConfirmPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\StatReport.xaml.cs">
+      <DependentUpon>StatReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\TrendAnalysis.xaml.cs">
+      <DependentUpon>TrendAnalysis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\TrendAnalysisViewModel.cs" />
+    <Compile Include="FastDataReadings\BasicStepSecondsHandler.cs" />
+    <Compile Include="FastDataReadings\DecisionStepSecondsHandler.cs" />
+    <Compile Include="FastDataReadings\DeleteExistsHandler.cs" />
+    <Compile Include="FastDataReadings\FastDataReading.cs" />
+    <Compile Include="FastDataReadings\FastDataReadingStepHandler.cs" />
+    <Compile Include="FastDataReadings\LevelRecordsStepSecondsHandler.cs" />
+    <Compile Include="FastDataReadings\OthersStepSecondsHandler.cs" />
+    <Compile Include="FastDataReadings\ReadSecondsHandler.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\AxisDataBindingObject.cs" />
+    <Compile Include="MyControl\BindingChartUIFactory.cs" />
+    <Compile Include="MyControl\DataPointTracker.xaml.cs">
+      <DependentUpon>DataPointTracker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\FAChart.xaml.cs">
+      <DependentUpon>FAChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\FAChartModel.cs" />
+    <Compile Include="MyControl\FAChartModel1.xaml.cs">
+      <DependentUpon>FAChartModel1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\FAGlobeChart.xaml.cs">
+      <DependentUpon>FAGlobeChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\FAGrid.xaml.cs">
+      <DependentUpon>FAGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\FAGridModel1.xaml.cs">
+      <DependentUpon>FAGridModel1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\GridDataPage.xaml.cs">
+      <DependentUpon>GridDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\IConfirmDialog.cs" />
+    <Compile Include="MyControl\PieChartWrap.xaml.cs">
+      <DependentUpon>PieChartWrap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\StackColumnChartWrap.xaml.cs">
+      <DependentUpon>StackColumnChartWrap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\DeleteFlightConfirm.xaml.cs">
+      <DependentUpon>DeleteFlightConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\SwitchChartPanelConfirmPage.xaml.cs">
+      <DependentUpon>SwitchChartPanelConfirmPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OldUI\AddFilePage.xaml.cs">
+      <DependentUpon>AddFilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OldUI\GroupDetailPage.xaml.cs">
+      <DependentUpon>GroupDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OldUI\GroupedItemsPage.xaml.cs">
+      <DependentUpon>GroupedItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OldUI\ItemDetailPage.xaml.cs">
+      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataModel\SampleDataSource.cs" />
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Service References\AircraftDataInput\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AircraftService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataInputHelper.cs" />
+    <Compile Include="Services\DataReading.cs" />
+    <Compile Include="Services\IDataReading.cs" />
+    <Compile Include="Services\RTConverter.cs" />
+    <Compile Include="Services\ServerHelper.cs" />
+    <Compile Include="Styles\AircraftDataAnalysisGlobalPallete.cs" />
+    <Compile Include="Test\TestAddAircraftModel.xaml.cs">
+      <DependentUpon>TestAddAircraftModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestBindDynamicColumn.xaml.cs">
+      <DependentUpon>TestBindDynamicColumn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestFlightAnalysisSub.xaml.cs">
+      <DependentUpon>TestFlightAnalysisSub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestGlobeData.xaml.cs">
+      <DependentUpon>TestGlobeData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestReadFile.xaml.cs">
+      <DependentUpon>TestReadFile.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Common\ReadMe.txt" />
+    <None Include="AircraftDataAnalysisModel1.WinRT_TemporaryKey.pfx" />
+    <None Include="DataModel\SampleData.json" />
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+    <None Include="Service References\AircraftDataInput\AircraftDataAnalysisModel1.WinRT.AircraftDataInput.Flight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftDataInput\DataInputService.wsdl" />
+    <None Include="Service References\AircraftDataInput\DataInputService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftDataInput\DataInputService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftDataInput\DataInputService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftDataInput\DataInputService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftDataInput\DataInputService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftDataInput\DataInputService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.AircraftInstance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.AircraftModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.ChartPanel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.Decision.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.DecisionRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.ExtremumPointInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.ExtremumReportDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.Flight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.FlightConditionDecision.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.FlightParameters.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.FlightRawData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.FlightRawDataRelationPoint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.GlobeData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftDataAnalysisModel1.WinRT.AircraftService.LevelTopFlightRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService.wsdl" />
+    <None Include="Service References\AircraftService\AircraftService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AircraftService\AircraftService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\1066419.png" />
+    <Content Include="Assets\566255.png" />
+    <Content Include="Assets\566256.png" />
+    <Content Include="Assets\566257.png" />
+    <Content Include="Assets\566258.png" />
+    <Content Include="Assets\566259.png" />
+    <Content Include="Assets\566260.png" />
+    <Content Include="Assets\566261.png" />
+    <Content Include="Assets\566262.png" />
+    <Content Include="Assets\566263.png" />
+    <Content Include="Assets\566264.png" />
+    <Content Include="Assets\566265.png" />
+    <Content Include="Assets\566266.png" />
+    <Content Include="Assets\566267.png" />
+    <Content Include="Assets\566268.png" />
+    <Content Include="Assets\566269.png" />
+    <Content Include="Assets\566270.png" />
+    <Content Include="Assets\566271.png" />
+    <Content Include="Assets\566272.png" />
+    <Content Include="Assets\bg.jpg" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\DarkGray.png" />
+    <None Include="Service References\AircraftDataInput\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AircraftDataInput\configuration.svcinfo" />
+    <None Include="Service References\AircraftDataInput\configuration91.svcinfo" />
+    <None Include="Service References\AircraftDataInput\DataInputService.disco" />
+    <None Include="Service References\AircraftService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AircraftService\configuration.svcinfo" />
+    <None Include="Service References\AircraftService\configuration91.svcinfo" />
+    <None Include="Service References\AircraftService\AircraftService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\EngineMonitoring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\ExtremumReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\FaultDiagAnalysis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Domain\FaultDiagnosis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\FlightAnalysis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\FlightAnalysisSub.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\FlightAnalysisSubLite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\ImportAircraftBatchConfirm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\ImportLoadConfirmPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\StatReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Domain\TrendAnalysis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\DataPointTracker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyControl\FAChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\FAChartModel1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\FAGlobeChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\FAGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\FAGridModel1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\GridDataPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\PieChartWrap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyControl\StackColumnChartWrap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyControl\DeleteFlightConfirm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyControl\SwitchChartPanelConfirmPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OldUI\AddFilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OldUI\GroupDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OldUI\GroupedItemsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OldUI\ItemDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test\TestAddAircraftModel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test\TestBindDynamicColumn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test\TestFlightAnalysisSub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test\TestGlobeData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test\TestReadFile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightDataReadingModel1\FlightDataReadingModel1.csproj">
+      <Project>{33a764c0-bfb4-4631-b26e-7920d35fec1d}</Project>
+      <Name>FlightDataReadingModel1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AircraftDataInput\" />
+    <WCFMetadataStorage Include="Service References\AircraftService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="NetAdvantage WinRT, Version=13.1">
+      <Name>NetAdvantage for Windows UI</Name>
+    </SDKReference>
+    <SDKReference Include="Syncfusion controls for WinRT XAML, Version=11.2.0.25">
+      <Name>Syncfusion Controls for WinRT XAML</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

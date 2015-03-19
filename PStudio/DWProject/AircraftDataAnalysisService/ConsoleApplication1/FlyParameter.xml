@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyParameters>
+  <Parameter Index="1" SubIndex="-1" Caption="左发排气温度" Frequence="4" Unit="℃"/>
+  <Parameter Index="2" SubIndex="-1" Caption="右发排气温度" Frequence="4" Unit="℃"/>
+  <Parameter Index="3" SubIndex="-1" Caption="左发机匣振动" Frequence="4" Unit="mm/s"/>
+  <Parameter Index="4" SubIndex="-1" Caption="右发机匣振动" Frequence="4" Unit="mm/s"/>
+  <Parameter Index="5" SubIndex="-1" Caption="左发滑油压力" Frequence="8" Unit="Kg/cm2"/>
+  <Parameter Index="6" SubIndex="-1" Caption="右发滑油压力" Frequence="4" Unit="Kg/cm2"/>
+  <Parameter Index="7" SubIndex="-1" Caption="左发低压压气机进口导流叶片转角位置" Frequence="8" Unit="°"/>
+  <Parameter Index="8" SubIndex="-1" Caption="右发低压压气机进口导流叶片转角位置" Frequence="8" Unit="°"/>
+  <Parameter Index="9" SubIndex="-1" Caption="左发高压压气机进口导流叶片转角位置" Frequence="8" Unit="°"/>
+  <Parameter Index="10" SubIndex="-1" Caption="右发高压压气机进口导流叶片转角位置" Frequence="8" Unit="°"/>
+  <Parameter Index="11" SubIndex="-1" Caption="左发进口空气温度" Frequence="4" Unit="K"/>
+  <Parameter Index="12" SubIndex="-1" Caption="左发入口处气压" Frequence="4" Unit="Pa"/>
+  <Parameter Index="13" SubIndex="-1" Caption="右发入口处气压" Frequence="4" Unit="Pa"/>
+  <Parameter Index="14" SubIndex="-1" Caption="左板位控制电压" Frequence="4" Unit="V"/>
+  <Parameter Index="15" SubIndex="-1" Caption="右板位控制电压" Frequence="4" Unit="V"/>
+  <Parameter Index="21" SubIndex="-1" Caption="左侧应急汇流条电压" Frequence="4" Unit="V"/>
+  <Parameter Index="22" SubIndex="-1" Caption="右侧应急汇流条电压" Frequence="4" Unit="V"/>
+  <Parameter Index="24" SubIndex="-1" Caption="左板二次电源电压" Frequence="4" Unit="V"/>
+  <Parameter Index="25" SubIndex="-1" Caption="右板二次电源电压" Frequence="4" Unit="V"/>
+  <Parameter Index="26" SubIndex="-1" Caption="操纵杆俯仰位置" Frequence="8" Unit="°"/>
+  <Parameter Index="27" SubIndex="-1" Caption="操纵杆倾斜位置" Frequence="8" Unit="°"/>
+  <Parameter Index="28" SubIndex="-1" Caption="温度传感器" Frequence="2" Unit="℃"/>
+  <Parameter Index="29" SubIndex="-1" Caption="左发喷口位置" Frequence="4" Unit="°"/>
+  <Parameter Index="30" SubIndex="-1" Caption="右发喷口位置" Frequence="4" Unit="°"/>
+  <Parameter Index="32" SubIndex="-1" Caption="左方向舵位置" Frequence="8" Unit="°"/>
+  <Parameter Index="33" SubIndex="-1" Caption="左襟副翼位置" Frequence="8" Unit="°"/>
+  <Parameter Index="34" SubIndex="-1" Caption="右襟副翼位置" Frequence="8" Unit="°"/>
+  <Parameter Index="37" SubIndex="-1" Caption="左前缘襟翼位置" Frequence="8" Unit="°"/>
+  <Parameter Index="38" SubIndex="-1" Caption="右前缘襟翼位置" Frequence="8" Unit="°"/>
+  <Parameter Index="35" SubIndex="-1" Caption="俯仰调整片效应机构连杆位置" Frequence="8" Unit="°"/>
+  <Parameter Index="36" SubIndex="-1" Caption="倾斜调整片效应机构连杆位置" Frequence="8" Unit="°"/>
+  <Parameter Index="39" SubIndex="-1" Caption="脚蹬位置" Frequence="8" Unit="°"/>
+  <Parameter Index="40" SubIndex="-1" Caption="左前翼位置" Frequence="4" Unit="°"/>
+  <Parameter Index="41" SubIndex="-1" Caption="右前翼位置" Frequence="4" Unit="°"/>
+  <Parameter Index="42" SubIndex="-1" Caption="左发油门杆位置" Frequence="4" Unit="°"/>
+  <Parameter Index="43" SubIndex="-1" Caption="右发油门杆位置" Frequence="4" Unit="°"/>
+  <Parameter Index="44" SubIndex="-1" Caption="左平尾位置" Frequence="8" Unit="°"/>
+  <Parameter Index="45" SubIndex="-1" Caption="右平尾位置" Frequence="8" Unit="°"/>
+  <Parameter Index="46" SubIndex="-1" Caption="法向过载" Frequence="16" Unit="g"/>
+  <Parameter Index="47" SubIndex="-1" Caption="侧向过载" Frequence="16" Unit="g"/>
+  <Parameter Index="48" SubIndex="-1" Caption="纵向过载" Frequence="16" Unit="g"/>
+  <Parameter Index="51" SubIndex="-1" Caption="1号整流装置电流" Frequence="4" Unit="A"/>
+  <Parameter Index="52" SubIndex="-1" Caption="2号整流装置电流" Frequence="4" Unit="A"/>
+  <Parameter Index="53" SubIndex="-1" Caption="3号整流装置电流" Frequence="4" Unit="A"/>
+  <Parameter Index="54" SubIndex="-1" Caption="左侧应急汇流条交流电压" Frequence="2" Unit="V"/>
+  <Parameter Index="55" SubIndex="-1" Caption="右侧应急汇流条交流电压" Frequence="2" Unit="V"/>
+  <Parameter Index="57" SubIndex="-1" Caption="燃油油量" Frequence="2" Unit="Kg"/>
+  <Parameter Index="59" SubIndex="-1" Caption="磁航向" Frequence="8" Unit="°"/>
+  <Parameter Index="60" SubIndex="-1" Caption="俯仰角" Frequence="8" Unit="°"/>
+  <Parameter Index="61" SubIndex="-1" Caption="横滚角" Frequence="8" Unit="°"/>
+  <Parameter Index="76" SubIndex="-1" Caption="航迹角" Frequence="4" Unit="°"/>
+  <Parameter Index="79" SubIndex="-1" Caption="俯仰角速率" Frequence="4" Unit="rad/s"/>
+  <Parameter Index="80" SubIndex="-1" Caption="横滚角速率" Frequence="4" Unit="rad/s"/>
+  <Parameter Index="81" SubIndex="-1" Caption="航向角速率" Frequence="4" Unit="rad/s"/>
+  <Parameter Index="84" SubIndex="-1" Caption="即时高度" Frequence="4" Unit="m"/>
+  <Parameter Index="95" SubIndex="-1" Caption="左平尾位置表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="96" SubIndex="-1" Caption="右平尾位置表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="97" SubIndex="-1" Caption="左襟副翼位置表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="98" SubIndex="-1" Caption="右襟副翼位置表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="99" SubIndex="-1" Caption="左方向舵位置表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="100" SubIndex="-1" Caption="右方向舵位置表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="104" SubIndex="-1" Caption="差动平尾指令" Frequence="20" Unit="°"/>
+  <Parameter Index="107" SubIndex="-1" Caption="方向舵指令" Frequence="20" Unit="°"/>
+  <Parameter Index="110" SubIndex="-1" Caption="前缘襟翼指令" Frequence="20" Unit="°"/>
+  <Parameter Index="113" SubIndex="-1" Caption="纵向杆位置表决值" Frequence="20" Unit="mm"/>
+  <Parameter Index="114" SubIndex="-1" Caption="横向杆位置表决值" Frequence="20" Unit="mm"/>
+  <Parameter Index="115" SubIndex="-1" Caption="脚蹬位移表决值" Frequence="20" Unit="mm"/>
+  <Parameter Index="116" SubIndex="-1" Caption="俯仰速率表决值" Frequence="20" Unit="°/s"/>
+  <Parameter Index="117" SubIndex="-1" Caption="横向速率表决值" Frequence="20" Unit="°/s"/>
+  <Parameter Index="118" SubIndex="-1" Caption="偏航速率表决值" Frequence="20" Unit="°/s"/>
+  <Parameter Index="119" SubIndex="-1" Caption="法向过载表决值" Frequence="20" Unit="g"/>
+  <Parameter Index="120" SubIndex="-1" Caption="侧向过载表决值" Frequence="20" Unit="g"/>
+  <Parameter Index="150" SubIndex="-1" Caption="最大允许垂直过载" Frequence="2" Unit="g"/>
+  <Parameter Index="151" SubIndex="-1" Caption="最小允许垂直过载" Frequence="2" Unit="g"/>
+  <Parameter Index="154" SubIndex="-1" Caption="左右平均真迎角" Frequence="2" Unit="°"/>
+  <Parameter Index="157" SubIndex="-1" Caption="最大允许侧滑角" Frequence="2" Unit="°"/>
+  <Parameter Index="158" SubIndex="-1" Caption="垂直过载" Frequence="2" Unit="g"/>
+  <Parameter Index="185" SubIndex="-1" Caption="动压表决值" Frequence="20" Unit="Kg/m2"/>
+  <Parameter Index="186" SubIndex="-1" Caption="静压表决值" Frequence="20" Unit="Kg/m2"/>
+  <Parameter Index="187" SubIndex="-1" Caption="左攻角表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="188" SubIndex="-1" Caption="右攻角表决值" Frequence="20" Unit="°"/>
+  <Parameter Index="189" SubIndex="-1" Caption="电源+5V" Frequence="20" Unit="V"/>
+  <Parameter Index="190" SubIndex="-1" Caption="电源+15V" Frequence="20" Unit="V"/>
+  <Parameter Index="191" SubIndex="-1" Caption="电源-15V" Frequence="20" Unit="V"/>
+  <Parameter Index="192" SubIndex="-1" Caption="电源+28V" Frequence="20" Unit="V"/>
+  <Parameter Index="210" SubIndex="-1" Caption="气压高度" Frequence="4" Unit="m"/>
+  <Parameter Index="212" SubIndex="-1" Caption="马赫数" Frequence="4" Unit="Ma"/>
+  <Parameter Index="214" SubIndex="-1" Caption="真空速" Frequence="2" Unit="Km/h"/>
+  <Parameter Index="215" SubIndex="-1" Caption="总温" Frequence="2" Unit="K"/>
+  <Parameter Index="216" SubIndex="-1" Caption="升降速度" Frequence="4" Unit="m/s"/>
+  <Parameter Index="217" SubIndex="-1" Caption="静温" Frequence="2" Unit="K"/>
+  <Parameter Index="219" SubIndex="-1" Caption="真侧滑角" Frequence="4" Unit="°"/>
+  <Parameter Index="220" SubIndex="-1" Caption="真迎角" Frequence="8" Unit="°"/>
+  <Parameter Index="222" SubIndex="-1" Caption="左发低压转子转速" Frequence="4" Unit="%"/>
+  <Parameter Index="223" SubIndex="-1" Caption="左发高压转子转速" Frequence="4" Unit="%"/>
+  <Parameter Index="224" SubIndex="-1" Caption="右发低压转子转速" Frequence="4" Unit="%"/>
+  <Parameter Index="225" SubIndex="-1" Caption="右发高压转子转速" Frequence="4" Unit="%"/>
+
+  <Parameter Index="108" SubIndex="3" Caption="三位开关-飞行" Frequence="20" Unit=""/>
+  <Parameter Index="108" SubIndex="4" Caption="三位开关-自动" Frequence="20" Unit=""/>
+  <Parameter Index="108" SubIndex="11" Caption="机翼折叠开关" Frequence="20" Unit=""/>
+  <Parameter Index="108" SubIndex="12" Caption="机轮承载开关" Frequence="20" Unit=""/>
+  <Parameter Index="108" SubIndex="13" Caption="左起落架放下" Frequence="20" Unit=""/>
+  <Parameter Index="108" SubIndex="14" Caption="前起落架收起" Frequence="20" Unit=""/>
+
+  <Parameter Index="134" SubIndex="0" Caption="右攻角机械故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="1" Caption="左攻角机械故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="2" Caption="右攻角电气故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="3" Caption="左攻角电气故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="4" Caption="静压故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="5" Caption="动压故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="6" Caption="侧向过载故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="7" Caption="法向过载故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="8" Caption="偏航速率故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="9" Caption="滚转速率故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="10" Caption="俯仰速率故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="11" Caption="脚蹬位移故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="12" Caption="侧向杆位移故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="13" Caption="纵向杆位移故障" Frequence="20" Unit=""/>
+  <Parameter Index="134" SubIndex="14" Caption="数字计算机故障" Frequence="20" Unit=""/>
+
+  <Parameter Index="138" SubIndex="0" Caption="方向舵SOV接通故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="1" Caption="方向舵模型故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="4" Caption="右襟副翼SOV接通故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="5" Caption="右襟副翼模型故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="7" Caption="左襟副翼SOV接通故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="8" Caption="左襟副翼模型故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="11" Caption="右平尾模型故障" Frequence="20" Unit=""/>
+  <Parameter Index="138" SubIndex="14" Caption="左平尾模型故障" Frequence="20" Unit=""/>
+
+  <Parameter Index="156" SubIndex="2" Caption="CPU组件故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="3" Caption="A/D组件故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="4" Caption="开关量组件故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="5" Caption="429组件故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="6" Caption="电源组件故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="7" Caption="侧滑角传感器加温故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="8" Caption="迎角传感器加温故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="9" Caption="侧滑角传感器故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="10" Caption="迎角传感器故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="11" Caption="过载传感器故障" Frequence="2" Unit=""/>
+  <Parameter Index="156" SubIndex="12" Caption="极限信号计算机故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="221" SubIndex="6" Caption="总温传感器故障" Frequence="2" Unit=""/>
+  <Parameter Index="221" SubIndex="7" Caption="大气数据传感器3故障" Frequence="2" Unit=""/>
+  <Parameter Index="221" SubIndex="8" Caption="大气数据传感器2故障" Frequence="2" Unit=""/>
+  <Parameter Index="221" SubIndex="9" Caption="大气数据传感器1故障" Frequence="2" Unit=""/>
+  <Parameter Index="221" SubIndex="10" Caption="大气数据计算机2故障" Frequence="2" Unit=""/>
+  <Parameter Index="221" SubIndex="11" Caption="大气数据计算机1故障" Frequence="2" Unit=""/>
+  <Parameter Index="221" SubIndex="12" Caption="大气数据分系统故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="227" SubIndex="8" Caption="左发防冰系统接通" Frequence="4" Unit=""/>
+  <Parameter Index="227" SubIndex="9" Caption="右发防冰系统接通" Frequence="4" Unit=""/>
+
+  <Parameter Index="238" SubIndex="0" Caption="左发动机滑油中有金属屑" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="1" Caption="右发动机滑油中有金属屑" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="2" Caption="左发进气压力转换活门未动作" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="3" Caption="右发进气压力转换活门未动作" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="4" Caption="左温度传感器故障" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="5" Caption="右温度传感器故障" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="10" Caption="左发超温" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="11" Caption="右发超温" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="12" Caption="左发动机滑油温度过高" Frequence="2" Unit=""/>
+  <Parameter Index="238" SubIndex="13" Caption="右发动机滑油温度过高" Frequence="2" Unit=""/>
+
+  <Parameter Index="239" SubIndex="0" Caption="左发低压压缩机导向调节器故障" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="1" Caption="右发低压压缩机导向调节器故障" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="2" Caption="左发综合调节器故障" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="3" Caption="右发综合调节器故障" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="4" Caption="左发燃油超温" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="5" Caption="右发燃油超温" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="6" Caption="左发降转" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="7" Caption="右发降转" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="8" Caption="左发动机加力状态信号" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="9" Caption="左发动机起动" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="10" Caption="右发动机起动" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="11" Caption="左发振动过大" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="12" Caption="右发振动过大" Frequence="2" Unit=""/>
+  <Parameter Index="239" SubIndex="13" Caption="右发动机加力状态信号" Frequence="2" Unit=""/>
+
+  <Parameter Index="240" SubIndex="2" Caption="剩油600升" Frequence="2" Unit=""/>
+  <Parameter Index="240" SubIndex="8" Caption="左进气道自动故障" Frequence="2" Unit=""/>
+  <Parameter Index="240" SubIndex="9" Caption="右进气道自动故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="241" SubIndex="10" Caption="起落架告警" Frequence="2" Unit=""/>
+
+  <Parameter Index="242" SubIndex="2" Caption="左交流发电机故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="3" Caption="右交流发电机故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="4" Caption="1个整流装置故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="5" Caption="2个整流装置故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="6" Caption="3个整流装置故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="7" Caption="PCU故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="8" Caption="左交流发电通道故障" Frequence="2" Unit=""/>
+  <Parameter Index="242" SubIndex="9" Caption="右交流发电通道故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="243" SubIndex="0" Caption="计算机三次故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="1" Caption="传动装置三次故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="2" Caption="动静压三次故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="3" Caption="倾斜阻尼器故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="4" Caption="航向阻尼器故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="7" Caption="襟翼自动故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="8" Caption="极限限制故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="9" Caption="前襟自动故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="10" Caption="差动平尾故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="11" Caption="纵向传感器/伺服机构二次故障" Frequence="2" Unit=""/>
+  <Parameter Index="243" SubIndex="13" Caption="纵向一次故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="244" SubIndex="0" Caption="第一液压系统油面低" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="1" Caption="第二液压系统油面低" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="2" Caption="第一液压系统故障" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="3" Caption="第二液压系统故障" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="8" Caption="发动机组合仪表故障" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="11" Caption="氧气系统故障" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="12" Caption="关闭座舱盖" Frequence="2" Unit=""/>
+  <Parameter Index="244" SubIndex="14" Caption="自动飞行控制系统故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="245" SubIndex="0" Caption="灯光告警计算机A机故障" Frequence="2" Unit=""/>
+  <Parameter Index="245" SubIndex="1" Caption="灯光告警计算机B机故障" Frequence="2" Unit=""/>
+  <Parameter Index="245" SubIndex="4" Caption="左发火警" Frequence="2" Unit=""/>
+  <Parameter Index="245" SubIndex="5" Caption="右发火警" Frequence="2" Unit=""/>
+  <Parameter Index="245" SubIndex="8" Caption="防冰信号器故障" Frequence="2" Unit=""/>
+  <Parameter Index="245" SubIndex="9" Caption="进气道结冰" Frequence="2" Unit=""/>
+
+  <Parameter Index="246" SubIndex="0" Caption="电传系统故障" Frequence="2" Unit=""/>
+  <Parameter Index="246" SubIndex="2" Caption="液压系统故障" Frequence="2" Unit=""/>
+
+  <Parameter Index="252" SubIndex="3" Caption="传感器组件故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="252" SubIndex="6" Caption="头盔瞄准具故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="252" SubIndex="9" Caption="光电雷达故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="252" SubIndex="12" Caption="PDR故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="252" SubIndex="15" Caption="DCMS故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="253" SubIndex="3" Caption="极限信号计算机故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="253" SubIndex="6" Caption="ADC（包括传感器）故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="253" SubIndex="9" Caption="武器系统故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="253" SubIndex="12" Caption="SMP故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="253" SubIndex="15" Caption="MC故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="254" SubIndex="3" Caption="短波电台故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="254" SubIndex="6" Caption="罗盘状态" Frequence="2" Unit=""/>
+  <Parameter Index="254" SubIndex="9" Caption="AIRNE故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="254" SubIndex="12" Caption="无线电高度故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="254" SubIndex="15" Caption="CCU故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="255" SubIndex="3" Caption="信标机故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="255" SubIndex="6" Caption="保密机故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="255" SubIndex="9" Caption="航管应答机故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="255" SubIndex="12" Caption="BPU故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="255" SubIndex="15" Caption="IFF故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="256" SubIndex="3" Caption="航姿系统故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="256" SubIndex="6" Caption="INS故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="256" SubIndex="9" Caption="MLS故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="256" SubIndex="12" Caption="超短波话音电台故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="256" SubIndex="15" Caption="超短波数传电台故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="257" SubIndex="3" Caption="导弹逼近告警分系统故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="257" SubIndex="6" Caption="无源干扰投放分系统故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="257" SubIndex="9" Caption="有源干扰分系统故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="257" SubIndex="12" Caption="电子支援子系统故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="257" SubIndex="15" Caption="控制管理分系统故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="258" SubIndex="3" Caption="JIDS故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="258" SubIndex="6" Caption="LIMC故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="258" SubIndex="9" Caption="DTE故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="258" SubIndex="12" Caption="AFCS故障状态" Frequence="2" Unit=""/>
+  <Parameter Index="258" SubIndex="15" Caption="AFCS适配器故障状态" Frequence="2" Unit=""/>
+
+  <Parameter Index="263" SubIndex="3" Caption="燃油压力调节器故障" Frequence="4" Unit=""/>
+  <Parameter Index="263" SubIndex="12" Caption="吊舱超压" Frequence="4" Unit=""/>
+  <Parameter Index="263" SubIndex="13" Caption="吊舱过热" Frequence="4" Unit=""/>
+  <Parameter Index="263" SubIndex="14" Caption="吊舱火警" Frequence="4" Unit=""/>
+
+  <Parameter Index="264" SubIndex="3" Caption="单平尾失效" Frequence="4" Unit=""/>
+  <Parameter Index="264" SubIndex="4" Caption="模拟故障" Frequence="4" Unit=""/>
+  <Parameter Index="264" SubIndex="5" Caption="计算机失效" Frequence="4" Unit=""/>
+  <Parameter Index="264" SubIndex="6" Caption="俯仰陀螺三次故障" Frequence="4" Unit=""/>
+  <Parameter Index="264" SubIndex="7" Caption="横航向故障" Frequence="4" Unit=""/>
+  <Parameter Index="264" SubIndex="8" Caption="襟副翼故障" Frequence="4" Unit=""/>
+  <Parameter Index="264" SubIndex="9" Caption="动静压失效" Frequence="4" Unit=""/>
+
+  <Parameter Index="266" SubIndex="0" Caption="侧向过载传感器故障" Frequence="4" Unit=""/>
+  <Parameter Index="266" SubIndex="1" Caption="法向过载传感器故障" Frequence="4" Unit=""/>
+  <Parameter Index="266" SubIndex="2" Caption="纵向过载传感器故障" Frequence="4" Unit=""/>
+  <Parameter Index="266" SubIndex="3" Caption="氧分压低" Frequence="4" Unit=""/>
+  <Parameter Index="266" SubIndex="4" Caption="氧气系统自检故障" Frequence="4" Unit=""/>
+
+</FlyParameters>
+

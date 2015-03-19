@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>动漫-首页</title>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/model.css" rel="stylesheet" type="text/css" />
+<link href="css/app.center.css" rel="stylesheet" type="text/css" />
+<style>
+#app-center .mid-right { width: 819px; height: 564px; overflow: hidden; background: url(images/819x54x90.png) repeat-y; }
+#app-center .mid-right .top { width: 478px; height: 24px; overflow: hidden; padding: 20px 47px 25px; }
+#app-center .mid-right .top .chk { background: url(images/12x34x90.png) no-repeat; display: inline-block; width: 12px; height: 12px; position: relative; top: 2px; cursor: pointer; }
+#app-center .mid-right .top .chk.on { background-position: 0px -22px; }
+#app-center .mid-right .top .down { background: url(images/84x29x90.png) no-repeat; display: block; width: 84px; height: 29px; }
+#app-center .mid-right .mid { padding: 0px 20px 0px 42px; width: 512px; }
+#app-center .mid-right .mid li { float: left; width: 80px; text-align: center; margin-right: 22px; margin-bottom: 25px; }
+#app-center .mid-right .mid li .img { position: relative; height: 70px; width: 70px; overflow: hidden; display: inline-block; margin-bottom: 5px; }
+#app-center .mid-right .mid li .s { position: absolute; display: block; height: 26px; width: 26px; background: url(images/26x62x90.png) no-repeat; display: none; }
+#app-center .mid-right .mid .on .s { background-position: 0px -36px; display: block; }
+#app-center .mid-right .mid .hover .s { display: block; }
+#app-center .mid-right .mid li .name { width: 80px; white-space: nowrap; overflow: hidden; }
+#app-center .mid-right .mid li .hide { display: none; }
+#app-center .mid-right .mid .hover .hide { display: block; }
+#app-center .mid-right .mid .hover .lh20 { display: none; }
+#app-center .mid-right .mid li .hide a { border: 1px solid #dbdbdb; background: #fff; line-height: 18px; padding: 0px 6px; color: #999; display: inline-block; border-radius: 2px; }
+#app-center .mid-right .mid li .hide a:hover { border-color: #4cb03d; background: #7ec74a; color: #fff; }
+#app-center .mid-right .m-l { width: 560px; }
+#app-center .mid-right .m-r { width: 210px; padding: 20px 18px; }
+#app-center .pages { font-size: 12px; height: 35px; overflow: hidden; text-align: center; }
+#app-center .pages a { padding: 3px 6px; color: #555; margin-right: 5px; text-align: center; border: 1px solid #c8c8c8; display: inline-block; }
+#app-center .pages a:hover, #app-center .pages .on { background-color: #2798fc; border: 1px solid #2798fc; color: #fff; }
+#app-center .pages .slh { border: none; padding: 0px; }
+#app-center .pages .slh:hover { background-color: #f7f7f7; color: #555; border: none; }
+#app-center .mid-right .m-r .app-rank li { width: 210px; height: 30px; overflow: hidden; margin-bottom: 10px; }
+#app-center .mid-right .m-r .app-rank li span { display: inline-block; line-height: 30px; float: left; }
+#app-center .mid-right .m-r .app-rank li .num { width: 20px; padding-left: 2px; }
+#app-center .mid-right .m-r .app-rank li .fr { float: right !important; }
+#app-center .mid-right .m-r .app-rank li .link { display: none; }
+#app-center .mid-right .m-r .app-rank li .link a { color: #999; background: #eee; border: 1px solid #dbdbdb; line-height: 18px; display: inline-block; padding: 0px 8px; text-shadow: 1px 1px 1px #fff; border-radius: 2px; margin-left: 3px; }
+#app-center .mid-right .m-r .app-rank li .link a:hover { border-color: #4cb03d; background: #7ec74a; color: #fff; text-shadow: none; }
+#app-center .mid-right .m-r .app-rank li .name { width: 105px; overflow: hidden; white-space: nowrap; }
+#app-center .mid-right .m-r .app-rank li:hover .link { display: block; }
+#app-center .mid-right .m-r .app-rank li:hover .time { display: none; }
+#app-center .mid-right .m-r .app-rank li:hover .name { width: 55px; }
+#app-center .mid-right .m-r .app-rank li .num.one { color: #e70003; }
+#app-center .mid-right .m-r .app-rank li .num.two { color: #ff5400; }
+#app-center .mid-right .m-r .app-rank li .num.thr { color: #ff8a00; }
+#app-center .title { display: inline-block; background: #91abc7; line-height: 24px; padding: 0px 7px; color: #fff; }
+</style>
+<script> 
+$(function(){ 
+    $("#app-center .top .chk").click(function(){
+      if($(this).hasClass("on")) {        
+        $(this).removeClass("on")
+        $("#app-center .mid li").removeClass("on")
+      }
+      else{
+        $(this).addClass("on")
+        $("#app-center .mid li").addClass("on")
+      }
+    });
+    $("#app-center .mid li").hover(function() {
+      $(this).toggleClass("hover");
+    });
+    $("#app-center .mid li").click(function() {
+      $(this).toggleClass("on");
+    });
+});
+</script>
+</head>
+<body>
+<div class="main" id="app-center">
+  <div class="fl main_left">
+    <h4 class="on">音乐首页</h4>
+    <div class="content_2 content box">
+      <dl>
+        <dt class="f14b"> <a>游戏</a> </dt>
+        <dd style="display:block;">
+          <ul>
+            <li class="f14"><a href="">系统</a></li>
+            <li class="f14"><a href="">娱乐</a></li>
+            <li class="f14"><a href="">网络视频</a></li>
+            <li class="f14"><a href="">通讯</a></li>
+            <li class="f14"><a href="">查询</a></li>
+            <li class="f14"><a href="">报刊杂志</a></li>
+            <li class="f14"><a href="">儿童应用</a></li>
+            <li class="f14"><a href="">餐饮天地</a></li>
+            <li class="f14"><a href="">动漫</a></li>
+          </ul>
+        </dd>
+        <dt class="f14b"> <a>排行榜</a> </dt>
+        <dd>
+          <ul>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+          </ul>
+        </dd>
+        <dt class="f14b"> <a>排行榜</a> </dt>
+        <dd>
+          <ul>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+          </ul>
+        </dd>
+        <dt class="f14b"> <a>排行榜</a> </dt>
+        <dd>
+          <ul>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+          </ul>
+        </dd>
+        <dt class="f14b"> <a>排行榜</a> </dt>
+        <dd>
+          <ul>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+          </ul>
+        </dd>
+        <dt class="f14b"> <a>排行榜</a> </dt>
+        <dd>
+          <ul>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+          </ul>
+        </dd>
+        <dt class="f14b"> <a>分类</a> </dt>
+        <dd>
+          <ul>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+            <li class="f14"><a href="">情感类</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <div class="fr main_right content_2 content">
+    <div class="thesearch">
+      <div class="thesearchr">
+        <input name="" class="gosearch" type="text" value="搜索应用">
+        <input class="goforsearch" type="submit" value="" name="sub">
+      </div>
+    </div>
+    <div class="mid-right  content_2 content">
+      <div style="" class="fl m-l">
+        <div class="top">
+          <div class="title fl">儿童应用</div>
+          <div class="lh24 fl ml10">252个应用</div>
+          <div class="fl lh24 ml10"><span class="chk mr5"></span>全选</div>
+          <div class="fr"><a href="#" class="down"></a></div>
+          <div class="clear"></div>
+        </div>
+        <div class="mid">
+          <ul>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="img"> <span class="s"></span> <img src="images/70x70x90.png"></div>
+              <div class="name">
+                <p class="lh20">母亲节的起源</p>
+                <p class="hide"><a class="fl">安装</a><a class="fr">收藏</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="pages t-center"> <a href="###">&lt;&lt;</a> <a class="on" href="###">1</a> <a href="###">2</a> <a href="###">3</a> <a href="###">4</a> <a href="###">5</a> <a class="slh">...</a> <a href="###">10</a> <a href="###">&gt;&gt;</a> </div>
+      </div>
+      <div class="fr m-r" style="">
+        <div class="btm">
+          <div class="title fl">软件排行</div>
+          <a href="#" class="fr c999999 lh24">更多>></a>
+          <div class="clear"></div>
+        </div>
+        <div class="app-rank mt10">
+          <ul>
+            <li> <span class="num one">1</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num two">2</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num thr">3</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">4</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">5</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">6</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">7</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">8</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">9</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">10</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">11</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">12</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">13</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">14</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">15</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">16</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">17</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">18</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">19</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+            <li> <span class="num">20</span><span class="mr10"><img src="images/30x30x90.png"></span><span class="c000000 name">百度视屏百度百度视屏百度百度视屏百度</span><span class="fr link"><a href="#" style="">安装</a><a href="#">收藏</a></span><span class="fr c999999 time">9千次</span>
+              <div class="clear"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--搜索列表-->
+    <ul class="searchlist">
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ</span>
+            <span class="spanr"></span>
+         </li>
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ2013</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ浏览器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ输入法</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ斗地主</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ音乐</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ播放器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ皮肤</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ四国象棋</span>
+            <span class="spanr"></span>
+         </li>  
+         <p><input type="image" src="images/136x22x1.jpg" width="136" height="22" /></p>      	
+    </ul>
+</div>
+</body>
+</html>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="js/minified/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/yybanner.js"></script>
+<script src="js/model.js"></script>

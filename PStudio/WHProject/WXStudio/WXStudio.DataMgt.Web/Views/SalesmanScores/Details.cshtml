@@ -1,0 +1,83 @@
+﻿@model WXStudio.EFModel.Entities.DataMgt.SalesmanScore
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesmanScore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleBookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleBookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesmanId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesmanId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScoreValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScoreValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Column1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Column1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Column2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Column2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Column3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Column3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SalesmanScoreId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

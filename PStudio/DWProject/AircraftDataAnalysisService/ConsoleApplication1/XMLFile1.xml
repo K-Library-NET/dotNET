@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlightParamterDefinition>
+  <FlightParameter ParameterID="Et"/>
+  <FlightParameter ParameterID="Hp"/>
+  <FlightParameter ParameterID="Vi"/>
+  <FlightParameter ParameterID="M"/>
+  <FlightParameter ParameterID="aT"/>
+  <FlightParameter ParameterID="Vy"/>
+  <FlightParameter ParameterID="Tt"/>
+  <FlightParameter ParameterID="ZH"/>
+  <FlightParameter ParameterID="HG"/>
+  <FlightParameter ParameterID="FY"/>
+  <FlightParameter ParameterID="EW"/>
+  <FlightParameter ParameterID="NS"/>
+  <FlightParameter ParameterID="DR"/>
+  <FlightParameter ParameterID="GS"/>
+  <FlightParameter ParameterID="Wy"/>
+  <FlightParameter ParameterID="Wx"/>
+  <FlightParameter ParameterID="Wz"/>
+  <FlightParameter ParameterID="KZB"/>
+  <FlightParameter ParameterID="KCB"/>
+  <FlightParameter ParameterID="ZS"/>
+  <FlightParameter ParameterID="CS"/>
+  <FlightParameter ParameterID="Fy1"/>
+  <FlightParameter ParameterID="Fx1"/>
+  <FlightParameter ParameterID="Fy2"/>
+  <FlightParameter ParameterID="Fx2"/>
+  <FlightParameter ParameterID="Ny"/>
+  <FlightParameter ParameterID="Nx"/>
+  <FlightParameter ParameterID="Nz"/>
+  <FlightParameter ParameterID="Dx"/>
+  <FlightParameter ParameterID="Dy"/>
+  <FlightParameter ParameterID="Dz"/>
+  <FlightParameter ParameterID="T6L"/>
+  <FlightParameter ParameterID="T6R"/>
+  <FlightParameter ParameterID="YD"/>
+  <FlightParameter ParameterID="NHL"/>
+  <FlightParameter ParameterID="NHR"/>
+  <FlightParameter ParameterID="KG1"/>
+  <FlightParameter ParameterID="KG17"/>
+  <FlightParameter ParameterID="CN"/>
+  <FlightParameter ParameterID="CS"/>
+  <FlightParameter ParameterID="Tt"/>
+  <!--
+  <FlightParameter ParameterID="T6L"/>
+  <FlightParameter ParameterID="T6R"/>
+  <FlightParameter ParameterID="NHL"/>
+  <FlightParameter ParameterID="NHR"/>-->
+</FlightParamterDefinition>

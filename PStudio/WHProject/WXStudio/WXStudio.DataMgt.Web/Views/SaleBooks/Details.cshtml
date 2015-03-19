@@ -1,0 +1,129 @@
+﻿@model WXStudio.EFModel.Entities.DataMgt.SaleBook
+
+@{
+    ViewBag.Title = "买楼确认";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>预约管理</h2>
+
+<div>
+    <h4>买楼确认</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesmanId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesmanId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WXCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WXCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WXNickname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WXNickname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViewConfirm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViewConfirm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyConfirm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyConfirm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Column1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Column1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Column2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Column2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Column3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Column3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyId)
+        </dd>
+
+    </dl>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="买楼确认" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.SaleBookId }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>手机管理-我的手机3-1</title>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+  <link href="css/base.css" rel="stylesheet" type="text/css" />
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <link href="css/model.css" rel="stylesheet" type="text/css" />
+  <style>
+#manage_my_phone3{padding: 60px 20px 20px 60px;}
+#manage_my_phone3 .left{width: 245px;float: left;background: url(images/212x388x61.png) top left no-repeat;height: 500px;position: relative;}
+#manage_my_phone3 .left img.phone_img{position: absolute;top: 39px;left: 21px;}
+#manage_my_phone3 .left p.phone_name{margin-top: 390px;height: 20px;}
+#manage_my_phone3 .left p.phone_name .sp1{font-size: 14px;color: #444;display: inline-block;margin-left: 15px;}
+#manage_my_phone3 .left p.phone_name .sp2{float: right;background: url(images/27x12x61.png) center left no-repeat;display: inline-block;height: 20px;width: 30px;margin-right: 45px;}
+#manage_my_phone3 .left p.phone_name .sp2 span{background-color: #3cad12;display: inline-block;height: 6px;margin-left: 3px;max-width: 17px}
+#manage_my_phone3 .left p.phone_control{width: 195px;height: 28px;margin-left: 15px;margin-top: 20px;}
+#manage_my_phone3 .left p.phone_control span.sp1{display: block;float: left;background: url(images/190x28x61.png) no-repeat;width: 62px;height: 28px;background-position: 0px -0;opacity: .5;}
+#manage_my_phone3 .left p.phone_control span.sp2{display: block;float: left;background: url(images/190x28x61.png) no-repeat;width: 62px;height: 28px;background-position: -63px -0;opacity: .5;}
+#manage_my_phone3 .left p.phone_control span.sp3{display: block;float: left;background: url(images/190x28x61.png) no-repeat;width: 64px;height: 28px;background-position: -126px -0;opacity: .5;}
+#manage_my_phone3 .left p.phone_control span:hover{opacity: 1;}
+#manage_my_phone3 .left p.phone_control span.on{opacity: 1;}
+#manage_my_phone3 .right{width: 460px;float: left;padding-top: 10px;}
+#manage_my_phone3 .right .d1 table{border-collapse: collapse;border-spacing: 0;}
+#manage_my_phone3 .right .d1 table td{vertical-align: bottom;border:10px solid #f7f7f7;}
+#manage_my_phone3 .right .d1 table td p{text-align: center;margin-bottom: 8px;}
+#manage_my_phone3 .right .d1 table td p span{font-size: 14px;color: #fff;}
+#manage_my_phone3 .right .d1 table .td1{background: url(images/200x200x61.png) center no-repeat;}
+#manage_my_phone3 .right .d1 table .td2{background: url(images/105x105x61.png) center no-repeat;}
+#manage_my_phone3 .right .d1 table .td3{background: url(images/105x105x62.png) center no-repeat;}
+#manage_my_phone3 .right .d1 table .td4{background: url(images/105x105x62.png) center no-repeat;}
+#manage_my_phone3 .right .d1 table .td5{background: url(images/105x105x63.png) center no-repeat;}
+#manage_my_phone3 .right .d1 table .td6{background: url(images/220x105x61.png) center no-repeat;}  
+#manage_my_phone3 .right .d1 table .td7{background: url(images/220x105x62.png) center no-repeat;}
+#manage_my_phone3 .right .d2 p{text-align: center;margin-top: 50px;margin-left: 10px;}
+#manage_my_phone3 .right .d2 p a{margin-right: 20px;}
+#manage_my_phone3 .bottom p{width: 240px;display: block;float: left;}
+#manage_my_phone3 .bottom p span{color: #999999;font-size: 12px;}
+#manage_my_phone3 .bottom p span.strip{background-color: #dce4ec;width: 100px;height: 10px;display: inline-block;margin-left: 10px;position: relative;}
+#manage_my_phone3 .bottom p span.strip>span{background-color: #8cc3ff;max-width: 100px;height: 10px;display: inline-block;position: absolute;}
+  </style>
+<script>
+  // $("#manage_my_phone3 .left p.phone_control span").hover(function(){$(this).css("opacity","1")},function(){$(this).css("opacity","0.5")})
+</script>
+</head>
+<body>
+  <div style="" class="main">
+    <div class="fl main_left">
+      <h4 class="on">我的手机</h4>
+      <div class="content_2 content box">
+        <dl>
+          <dt style="" class="f14b">
+            <a style="">手机应用</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">升级应用</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">我的应用</a>
+              </li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">本地资源</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">最近导入</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">我的收藏</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">电脑资源</a>
+              </li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">最近下载</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">应用</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">音乐</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">阅读</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">动漫</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">视频</a>
+              </li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">工具箱</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+              <li style="" class="f14">
+                <a href="">xxx</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="fr main_right content_2 content">
+      <div id="manage_my_phone3">
+        <div class="left">
+          <img class="phone_img" src="images/171x302x61.png" alt="">
+          <p class="phone_name">
+            <span class="sp1">三星I9300</span>
+            <span class="sp2">
+              <span style="width:38%"></span>
+            </span>
+          </p>
+          <p class="phone_control">
+            <span class="sp1" style=""></span>
+            <span class="sp2" style=""></span>
+            <span class="sp3 on" style=""></span>
+          </p>
+        </div>
+        <div class="right">
+          <div class="d1">
+            <table width="" border="0">
+              <tr>
+                <td rowspan="2" class="td1" width="220" height="220"><p><span>通讯录</span><span>（105）</span></p></td>
+                <td class="td2" width="105" height="105"><p><span>音乐</span><span>（105）</span></p></td>
+                <td class="td3" width="105" height="105"><p><span>图书</span><span>（105）</span></p></td>
+              </tr>
+              <tr>
+                <td class="td4" width="105" height="105"><p><span>图片</span><span>（105）</span></p></td>
+                <td class="td5" width="105" height="105"><p><span>视频</span><span>（105）</span></p></td>
+              </tr>
+              <tr>
+                <td class="td6" width="220" height="105"><p><span>应用</span><span>（105）</span></p></td>
+                <td colspan="2" class="td7" width="220" height="105"><p><span>短信</span><span>（105）</span></p></td>
+              </tr>
+            </table>
+          </div>
+          <div class="d2">
+            <p><a href=""><img class="opacity08" src="images/130x38x63.png" alt=""></a><a href=""><img class="opacity08" src="images/130x38x64.png" alt=""></a></p>
+          </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="bottom">
+          <p class=""><span>内存：</span><span>4.99G</span><span>&#47;</span><span>12G</span><span class="strip"><span style="width:78%"></span></span></p>
+          <p class=""><span>SD卡：</span><span>4.99G</span><span>&#47;</span><span>12G</span><span class="strip"><span style="width:25%"></span></span></p>
+          <p class=""><span>SD卡2：</span><span>4.99G</span><span>&#47;</span><span>12G</span><span class="strip"><span style="width:42%"></span></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!--搜索列表-->
+    <ul class="searchlist">
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ</span>
+            <span class="spanr"></span>
+         </li>
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ2013</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ浏览器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ输入法</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ斗地主</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ音乐</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ播放器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ皮肤</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ四国象棋</span>
+            <span class="spanr"></span>
+         </li>  
+         <p><input type="image" src="images/136x22x1.jpg" width="136" height="22" /></p>      	
+    </ul>
+  </div>
+</body>
+</html>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/model.js"></script>

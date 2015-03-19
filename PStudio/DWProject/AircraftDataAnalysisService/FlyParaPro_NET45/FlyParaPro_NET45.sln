@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyParamBusiness", "FlyParamBusiness\FlyParamBusiness.csproj", "{1B4A95FE-B387-434E-98A3-CE811FE2BC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPlot", "Nplot\NPlot.csproj", "{C7884B89-8BC2-4567-9D4F-06B91F78E24B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickFlyParam", "QuickFlyParam\QuickFlyParam.csproj", "{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://42.96.198.241:8080/tfs/pstudio
+		SccProjectUniqueName0 = FlyParamBusiness\\FlyParamBusiness.csproj
+		SccProjectName0 = FlyParamBusiness
+		SccAuxPath0 = http://42.96.198.241:8080/tfs/pstudio
+		SccLocalPath0 = FlyParamBusiness
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Nplot\\NPlot.csproj
+		SccProjectName1 = Nplot
+		SccAuxPath1 = http://42.96.198.241:8080/tfs/pstudio
+		SccLocalPath1 = Nplot
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = QuickFlyParam\\QuickFlyParam.csproj
+		SccProjectName2 = QuickFlyParam
+		SccAuxPath2 = http://42.96.198.241:8080/tfs/pstudio
+		SccLocalPath2 = QuickFlyParam
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

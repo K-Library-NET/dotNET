@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>音乐-搜索页</title>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/model.css" rel="stylesheet" type="text/css" />
+<style>
+#search_music .migubang { width:738px; margin:20px auto 0px;} 
+
+#search_music .migubang .search_title{height: 39px;border-bottom: 1px solid #D1D1D1}
+#search_music .migubang .search_title .sp2{font-size: 16px;font-weight: bold;color: #e00b01;}
+#search_music .migubang .search_title .sp1{font-size: 16px;font-weight: bold;}
+#search_music .migubang .search_title .sp3{color: #505050;}
+
+#search_music .migubang .migubang_list { width:738px; margin:0px auto;}
+#search_music .migubang .migubang_list .migubang_list_i { padding:0px 15px; height:45px; line-height:45px; width:708px; overflow:hidden;}
+#search_music .migubang .migubang_list .migubang_list_i:hover { background:url(images/l_over_l.jpg) left center no-repeat #fff;}
+#search_music .migubang .migubang_list .qishu { background-color:#f0f0f0;}
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_gou { float:left; width:12px; height:12px; background:url(images/gou.png) top center no-repeat; overflow:hidden; margin-top:16px; display:block;}
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_index { width:38px; margin-left:5px; font-size:12px; float:left; line-height:45px; height:45px;color:#191919;}
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_title { width:290px; float:left; font-size:12px; line-height:45px; height:45px; color:#191919; overflow:hidden; }
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_name,#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_count { width:150px; float:left; font-size:12px; line-height:45px; height:45px; overflow:hidden; color:#999;}
+
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_st { float:left; background:url(images/ting.png) top center no-repeat; margin-top:17px; margin-right:42px; display:block; width:10px; height:10px;}
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_fs { float:left; background:url(images/fasong.png) top center no-repeat; margin-top:17px; display:block; width:13px; height:10px;}
+
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_st_txt,#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_xz_txt,#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_fs_txt { display:none; background:url(images/download.png) center no-repeat; width:33px; height:21px; position:absolute; margin-top:-5px; color:#fff; text-align:center; line-height:18px;}
+
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_st_txt { margin-left:622px;}
+#search_music .migubang .migubang_list .migubang_list_i .migubang_list_i_fs_txt { margin-left:675px;}
+
+#search_music .pages { width:618px; margin:10px auto; font-size:12px; padding-left:120px; height:35px; overflow:hidden;}
+#search_music .pages a { padding:8px 12px; color:#555; margin-right:5px; text-align:center; float:left; border:1px solid #c8c8c8;}
+#search_music .pages a:hover,#search_music .pages .on { background-color:#2798fc; border:1px solid #2798fc; color:#fff;}
+#search_music .pages .slh { border:none; margin:0px; padding:9px 0px;}
+#search_music .pages .slh:hover { background-color:#f7f7f7; color:#555; border:none;}
+#search_music .pages input { float:left; line-height:30px; border:1px solid #c8c8c8; width:50px; margin-right:5px; height:33px; padding-left:5px;}
+#search_music .pages .gogo { width:53px; border:1px solid #c8c8c8; text-align:center; height:35px; cursor:pointer;}
+#search_music .pages .djy:hover {background-color:#f7f7f7; color:#555; border:1px solid #c8c8c8; }
+
+</style>
+</head>
+<body>
+  <div style="" class="main">
+    <div class="fl main_left">
+      <h4 class="on">音乐首页</h4>
+      <div class="content_2 content box">
+        <dl>
+          <dt style="" class="f14b dt1">
+            <a class="a2" style="">特惠榜单专区</a>
+          </dt>
+          <dd></dd>
+          <dt style="" class="f14b dt1">
+            <a class="a2" style="">排行榜</a>
+          </dt>
+          <dd></dd>
+          <dt style="" class="f14b">
+            <a style="">歌手分类</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+              <li style="" class="f14"><a href="">华语男歌手</a></li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">排行榜</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">排行榜</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">排行榜</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">排行榜</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">排行榜</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+            </ul>
+          </dd>
+          <dt style="" class="f14b">
+            <a style="">分类</a>
+          </dt>
+          <dd>
+            <ul>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+              <li style="" class="f14"><a href="">情感类</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="thesearch">
+          <div class="thesearchl">
+          <a class="back" href="###"></a>
+          <a class="goah" href="###"></a>
+          <a class="renew" href="###"></a>
+          </div>
+          
+          <div class="thesearchr">
+                <input name="" class="gosearch" type="text" value="黄金时代">
+                <input class="goforsearch" type="submit" value="" name="sub">
+          </div>
+      </div>
+    <div class="fr main_right content_2 content h564">
+    
+    
+    
+      <div id="search_music">
+    
+    <div class="migubang">
+        <div class="search_title">
+          <span class="sp1">“</span><span class="sp2"> 黄金时代 </span> <span class="sp1">”</span>
+          <span class="sp3">相关搜索结果</span>
+        </div>
+        
+       
+        
+        <div class="clear"></div>
+        
+        <div class="migubang_list">
+        <ul>
+            <li class="migubang_list_i qishu">
+                <div class="migubang_list_i_index">1</div>
+                <div class="migubang_list_i_title">黄金时代</div>
+                <div class="migubang_list_i_name">戴佩妮</div>
+                <div class="migubang_list_i_count">400人定制</div>
+                <a href="###" class="migubang_list_i_st theover"></a><a class="migubang_list_i_st_txt">试听</a>
+                <a href="###" class="migubang_list_i_fs theover"></a><a class="migubang_list_i_fs_txt">发送</a>
+            </li>
+            <li class="migubang_list_i">
+                <div class="migubang_list_i_index">2</div>
+                <div class="migubang_list_i_title">黄金时代</div>
+                <div class="migubang_list_i_name">陈奕迅</div>
+                <div class="migubang_list_i_count">1256人定制</div>
+                <a href="###" class="migubang_list_i_st theover"></a><a class="migubang_list_i_st_txt">试听</a>
+                <a href="###" class="migubang_list_i_fs theover"></a><a class="migubang_list_i_fs_txt">发送</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div class="pages">
+    <a href="###">&lt;&lt;</a>
+    <a class="on" href="###">1</a>
+    <a href="###">2</a>
+    <a href="###">3</a>
+    <a href="###">4</a>
+    <a href="###">5</a>
+    <a class="slh">...</a>
+    <a href="###">10</a>
+    <a class="slh">...</a>
+    <a href="###">&gt;&gt;</a>
+    <input name="" type="text" />
+    <input class="gogo" name="" type="submit" value="跳转" />
+    <a class="djy">1/55</a>
+    </div> 
+    
+    
+</div>
+    </div>
+    <div class="clear"></div>
+    <!--搜索列表-->
+    <ul class="searchlist">
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ</span>
+            <span class="spanr"></span>
+         </li>
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ2013</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ浏览器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ输入法</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ斗地主</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ音乐</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ播放器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ皮肤</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ四国象棋</span>
+            <span class="spanr"></span>
+         </li>  
+         <p><input type="image" src="images/136x22x1.jpg" width="136" height="22" /></p>      	
+    </ul>
+  </div>
+</body>
+</html>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/model.js"></script>

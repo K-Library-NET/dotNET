@@ -1,0 +1,205 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PStudio.WinApp.Aircraft.FDAPlatform"
+    xmlns:local2="using:PStudio.WinApp.Aircraft.FDAPlatform.Domain"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Charts="using:Syncfusion.UI.Xaml.Charts"
+    xmlns:my="using:AircraftDataAnalysisWinRT.MyControl"
+    xmlns:Navigation="using:Syncfusion.UI.Xaml.Controls.Navigation"
+    xmlns:primitives="using:Syncfusion.UI.Xaml.Primitives"
+    x:Class="PStudio.WinApp.Aircraft.FDAPlatform.MainPage"
+    mc:Ignorable="d"
+>
+    <Page.Resources>
+        <local2:BooleanVisibilityConverter x:Name="booleanVisibilityConverter"/>
+        <Style TargetType="Navigation:SfTabItem">
+            <Setter Property="SelectedForeground">
+                <Setter.Value>
+                    <SolidColorBrush Color="#FF1196CD"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="DarkGray"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="{StaticResource AllBackgroundColor}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="640"/>
+        </Grid.ColumnDefinitions>
+        <Image Visibility="Collapsed" HorizontalAlignment="Stretch"  Margin="0" Grid.Row="0" VerticalAlignment="Stretch" Source="Assets/bg.jpg" Stretch="Fill" Grid.ColumnSpan="2" />
+        <Grid Margin="0" x:Name="grdPanel1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="2" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Orientation="Horizontal">
+                <Button x:Name="btImport" Margin="5,0" Click="btImport_Click" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" Height="60" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566272.png" Width="32" Height="32"/>
+                        <TextBlock Text="导入架次" VerticalAlignment="Center" FontSize="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btSelect" Margin="5,0" Click="btSelect_Click" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" Height="60" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566261.png" Width="32" Height="32"/>
+                        <TextBlock Text="批量导入" VerticalAlignment="Center" FontSize="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btDelete" Margin="5,0" Click="btDelete_Click" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" Height="60" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566265.png" Width="32" Height="32"/>
+                        <TextBlock Text="删除架次" VerticalAlignment="Center" FontSize="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btShowGrid" Margin="5,0" Click="btShowGridClick_Click"
+                        Visibility="{Binding Path=IsShowGridEnable,Converter={StaticResource ResourceKey=booleanVisibilityConverter}}"
+                        Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" Height="60" >
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Source="Assets/566265.png" Width="32" Height="32"/>-->
+                        <TextBlock Text="数据列表" VerticalAlignment="Center" FontSize="24"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Border BorderBrush="{StaticResource AllBorderColor}" BorderThickness="1" Margin="10,0" Grid.Row="1" CornerRadius="8" Padding="10" Background="{StaticResource AllBackgroundWhiteColor}" >
+                <Navigation:SfTabControl x:Name="tbAircraftInstances" SelectedIndex="0">
+                    <Navigation:SfTabControl.Items>
+                        <Navigation:SfTabItem Header="最近使用">
+                            <GridView Margin="0,0,0,0" x:Name="grdFlights" SelectionChanged="OnCurrentFlightChanged" 
+                          Background="White" BorderBrush="{StaticResource AllBorderColor}">
+                                <GridView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Width="200" Height="60" Background="LightBlue">
+                                            <StackPanel Margin="5" Orientation="Horizontal">
+                                                <Image Source="Assets/566259.png" Width="40" Height="40"/>
+                                                <!--<TextBlock FontSize="18" Foreground="Black" Text="{Binding FlightID}" />
+-->
+                                                <TextBlock Margin="5" Width="140" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="Black" Text="{Binding FlightName}" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                        </Navigation:SfTabItem>
+                        <Navigation:SfTabItem Header="飞行日期">
+                            <Navigation:SfTreeNavigator x:Name="navFlightByDate" ItemsSource="{Binding Path=Children}"
+                                                        SelectionChanged="OnCurrentFlightChanged2"  NavigationMode="Extended">
+                                <Navigation:SfTreeNavigator.ItemTemplate>
+                                    <primitives:HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Path=Caption}" FontSize="18" Foreground="Black"
+                                                                    VerticalAlignment="Center" Margin="18,0,0,0"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                        <primitives:HierarchicalDataTemplate.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Path=Caption}" FontSize="20"
+                                                                  FontWeight="Bold" Foreground="Blue"
+                                                                    VerticalAlignment="Center" Margin="18,0,0,0"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </primitives:HierarchicalDataTemplate.ItemTemplate>
+                                    </primitives:HierarchicalDataTemplate>
+                                </Navigation:SfTreeNavigator.ItemTemplate>
+                            </Navigation:SfTreeNavigator>
+                        </Navigation:SfTabItem>
+                        <Navigation:SfTabItem Header="机号">
+                            <Navigation:SfTreeNavigator x:Name="navFlightByAircraftInstance"
+                                                         SelectionChanged="OnCurrentFlightChanged3" NavigationMode="Extended">
+                                <Navigation:SfTreeNavigator.ItemTemplate>
+                                    <primitives:HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Path=Caption}" FontSize="18" Foreground="Black"
+                                                                    VerticalAlignment="Center" Margin="18,0,0,0"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                        <primitives:HierarchicalDataTemplate.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Path=Caption}" FontSize="20"
+                                                                  FontWeight="Bold" Foreground="Blue"
+                                                                    VerticalAlignment="Center" Margin="18,0,0,0"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </primitives:HierarchicalDataTemplate.ItemTemplate>
+                                    </primitives:HierarchicalDataTemplate>
+                                </Navigation:SfTreeNavigator.ItemTemplate>
+                            </Navigation:SfTreeNavigator>
+                        </Navigation:SfTabItem>
+                    </Navigation:SfTabControl.Items>
+                </Navigation:SfTabControl>
+            </Border>
+            <TextBlock VerticalAlignment="Center" FontSize="24" Margin="0" HorizontalAlignment="Center" Text="飞行架次"/>
+        </Grid>
+        <Grid Grid.Column="1" Margin="0" x:Name="grdPanel2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="{StaticResource AllBorderColor}" BorderThickness="1" Margin="10,0" Background="{StaticResource AllBackgroundWhiteColor}" Grid.Row="1" CornerRadius="8" Padding="10">
+                <my:FAGlobeChart x:Name="scMap" />
+            </Border>
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2">
+                <Button x:Name="btFlightAnalysis" Margin="5,10" Click="btFlightAnalysis_Click" Width="220" Height="90" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566255.png" Width="50" Height="50"/>
+                        <TextBlock Text="飞行分析" VerticalAlignment="Center" FontSize="24" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btFaultDiagnosis" Margin="5,10" Click="btFaultDiagnosis_Click" Width="190" Height="90" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <Border x:Name="borderNoFault" BorderBrush="Green" Visibility="{Binding Path=IsCurrentFlightNoFault,
+                            Converter={StaticResource ResourceKey=booleanVisibilityConverter}}"
+                                BorderThickness="3" CornerRadius="25">
+                            <TextBlock FontSize="36" FontFamily="SimSun" Foreground="Green" Text="√"/>
+                        </Border>
+                        <Border x:Name="borderFault" BorderBrush="Red" BorderThickness="3" CornerRadius="25"
+                                 Visibility="{Binding Path=IsCurrentFlightFault,
+                            Converter={StaticResource ResourceKey=booleanVisibilityConverter}}">
+                            <TextBlock FontSize="36" FontFamily="SimSun" Foreground="Red" Text="×"/>
+                        </Border>
+                        <TextBlock Text="故障诊断" VerticalAlignment="Center" FontSize="24" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btExtremumReport" Margin="5,10" Click="btExtremumReport_Click" Width="190" Height="90" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566258.png" Width="50" Height="50"/>
+                        <TextBlock Text="极值报表" VerticalAlignment="Center" FontSize="24" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,10" Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btEngineMonitoring" Margin="5" Click="btEngineMonitoring_Click" Width="220" Height="90" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566257.png" Width="50" Height="50"/>
+                        <TextBlock Text="发动机监控" VerticalAlignment="Center" FontSize="24"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btTrendAnalysis" Margin="5" Click="btTrendAnalysis_Click" Width="190" Height="90" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566261.png" Width="50" Height="50"/>
+                        <TextBlock Text="趋势分析" VerticalAlignment="Center" FontSize="24" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btStatReport" Margin="5" Click="btStatReport_Click" Width="190" Height="90" Foreground="Black" BorderBrush="{StaticResource AllBorderColor}" Background="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/566267.png" Width="50" Height="50"/>
+                        <TextBlock Text="报表统计" VerticalAlignment="Center" FontSize="24" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <TextBlock Text="飞行轨迹" VerticalAlignment="Center" FontSize="24" Margin="0" HorizontalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="dialogArea" Grid.ColumnSpan="2" Margin="0" DoubleTapped="dialogArea_DoubleTapped"/>
+        <ProgressBar Grid.Column="0" Grid.ColumnSpan="2" Visibility="Collapsed"
+			x:Name="ProgressBar1"  IsIndeterminate="False"  Height="10" Margin="0,0,0,0" VerticalAlignment="Top" />
+
+    </Grid>
+</Page>

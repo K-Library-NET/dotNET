@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WXStudio.DataMgt.Web.Models.SalesmanScoreViewModel>
+
+@{
+    ViewBag.Title = "销售积分";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>销售积分</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.SaleBookId)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SalesmanId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesmanPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesmanName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>@*
+            <th>
+                @Html.DisplayNameFor(model => model.Column2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Column3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyID)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.SaleBookId)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesmanId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesmanPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesmanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDate)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CompanyID)
+                </td>*@
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.SalesmanScore.SalesmanScoreId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SalesmanScore.SalesmanScoreId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SalesmanScore.SalesmanScoreId })*@
+            </td>
+        </tr>
+    }
+
+</table>

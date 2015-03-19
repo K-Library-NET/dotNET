@@ -1,0 +1,133 @@
+CREATE TABLE `tb_article` (
+  `ArticleId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `OrgId` int(11) DEFAULT NULL COMMENT '组织ID，用于数据分块',
+  `ArtSortId` int(11) DEFAULT '0' COMMENT '类别ID',
+  `ITop` int(11) DEFAULT '0' COMMENT '置顶：0不是，1是',
+  `TopBeginTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '置顶开始时间',
+  `TopEndTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '置顶结束时间',
+  `Title` varchar(100) DEFAULT NULL COMMENT '标题',
+  `Keywords` varchar(150) DEFAULT NULL COMMENT '关键字',
+  `Summary` varchar(680) DEFAULT NULL COMMENT '简介',
+  `Content` text COMMENT '内容',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `PublishTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '发布时间',
+  `AOrder` int(11) DEFAULT '99' COMMENT '排序',
+  `State` int(11) DEFAULT '0' COMMENT '状态',
+  `MinImg` varchar(350) DEFAULT NULL COMMENT '缩略图',
+  PRIMARY KEY (`ArticleId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='文章表';
+
+CREATE TABLE `tb_artsort` (
+  `ArtSortId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `Name` varchar(50) DEFAULT NULL COMMENT '名称',
+  `ParentId` int(11) DEFAULT '0' COMMENT '父级ID',
+  `IndexLevel` int(11) DEFAULT '1' COMMENT '当前级别',
+  `SOrder` int(11) DEFAULT '0' COMMENT '排序',
+  `State` int(11) DEFAULT '1',
+  `Note` varchar(150) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`ArtSortId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='文章分类表';
+
+CREATE TABLE `tb_group` (
+  `GroupId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `Name` varchar(50) NOT NULL COMMENT '名称-本地',
+  `WeiId` int(11) DEFAULT '0' COMMENT '对应微信分组ID',
+  `WeiName` varchar(50) DEFAULT NULL COMMENT '微信分组名',
+  `Note` varchar(100) DEFAULT NULL COMMENT '备注',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `State` int(11) DEFAULT '1' COMMENT '状态',
+  PRIMARY KEY (`GroupId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='分组表';
+
+CREATE TABLE `tb_keyword` (
+  `KeyWordId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `Name` varchar(50) DEFAULT NULL COMMENT '名称',
+  `Note` varchar(250) DEFAULT NULL COMMENT '备注',
+  `State` int(11) DEFAULT '1' COMMENT '状态',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `LinkUrl` varchar(250) DEFAULT NULL COMMENT '链接地址',
+  `ReType` int(11) DEFAULT '1' COMMENT '回复消息类型',
+  `OrgId` int(11) DEFAULT NULL COMMENT '组织ID，用于数据分块',
+  `KeyContent_Title` varchar(150) DEFAULT NULL COMMENT '标题',
+  `KeyContent_Content` varchar(700) DEFAULT NULL COMMENT '内容',
+  `KeyContent_Type` int(11) DEFAULT NULL COMMENT '类型',
+  `KeyContent_MinImg` varchar(250) DEFAULT NULL COMMENT '图片',
+  `KeyContent_ITop` int(11) DEFAULT NULL COMMENT '置顶：0不是，1是',
+  `KeyContent_TopBeginTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '置顶开始时间',
+  `KeyContent_TopEndTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '置顶结束时间',
+  `KeyContent_Href` varchar(250) DEFAULT NULL COMMENT '''#'' href=。。。',
+  PRIMARY KEY (`KeyWordId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='关键字表';
+
+CREATE TABLE `tb_personalmenu` (
+  `PersonalMenuId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `OrgId` int(11) DEFAULT NULL COMMENT '组织ID，用于数据分块',
+  `Name` varchar(50) DEFAULT NULL COMMENT '名称',
+  `Type` int(11) DEFAULT '1' COMMENT '类型：1 click 2 view',
+  `ParentId` int(11) DEFAULT NULL COMMENT '父级ID',
+  `IndexLevel` int(11) DEFAULT '1' COMMENT '当前级别',
+  `LinkUrl` varchar(350) DEFAULT '#' COMMENT '链接地址',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `POrder` int(11) DEFAULT '99' COMMENT '排序',
+  `State` int(11) DEFAULT '1' COMMENT '状态',
+  `Note` varchar(150) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`PersonalMenuId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='自定义菜单表';
+
+CREATE TABLE `tb_reusermsg` (
+  `ReUserMsgId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `UserId` int(11) DEFAULT NULL COMMENT '用户表主键',
+  `UserMsgId` int(11) DEFAULT NULL COMMENT '消息表主键',
+  `ReType` int(11) DEFAULT '1' COMMENT '回复类型',
+  `ReFrom` int(11) DEFAULT '1' COMMENT '回复点 // 1.文章',
+  `ReContent` varchar(80) DEFAULT NULL COMMENT '回复的内容？',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`ReUserMsgId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='回复消息表';
+
+CREATE TABLE `tb_siteorganizations` (
+  `OrganizationId` int(11) NOT NULL AUTO_INCREMENT,
+  `SiteName` varchar(50) NOT NULL COMMENT '站点名称',
+  `SiteDescription` varchar(250) DEFAULT NULL COMMENT '站点描述',
+  `ConnectionString` varchar(250) NOT NULL COMMENT '数据库连接字符串',
+  PRIMARY KEY (`OrganizationId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='组织表';
+
+CREATE TABLE `tb_user` (
+  `UserId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `OrgId` int(11) DEFAULT NULL COMMENT '组织ID，用于数据分块',
+  `InId` int(11) DEFAULT NULL COMMENT '自由系统的用户ID',
+  `OpenId` varchar(150) DEFAULT NULL COMMENT '微信openid',
+  `GroupId` int(11) DEFAULT NULL COMMENT '分组ID',
+  `NickName` varchar(50) DEFAULT NULL COMMENT '昵称-微信',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `State` int(11) DEFAULT '1' COMMENT '状态，1为正常',
+  `PreFirst` varchar(150) DEFAULT NULL COMMENT '预留字段1',
+  `UserData_Sex` int(11) DEFAULT NULL,
+  `UserData_City` varchar(45) DEFAULT NULL,
+  `UserData_Country` varchar(45) DEFAULT NULL,
+  `UserData_Province` varchar(45) DEFAULT NULL,
+  `UserData_Language` varchar(45) DEFAULT NULL,
+  `UserData_HeadImgUrl` varchar(250) DEFAULT NULL,
+  `UserData_SubTime` varchar(45) DEFAULT NULL,
+  `UserData_PreAllocProperty1` varchar(45) DEFAULT NULL,
+  `UserData_PreAllocProperty2` varchar(45) DEFAULT NULL,
+  `UserData_PreAllocProperty3` varchar(45) DEFAULT NULL,
+  `UserData_PreAllocProperty4` varchar(45) DEFAULT NULL,
+  `UserData_PreAllocProperty5` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`UserId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='用户表';
+
+CREATE TABLE `tb_usermsg` (
+  `UserMsgId` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `OrgId` int(11) DEFAULT NULL COMMENT '组织ID，用于数据分块',
+  `MsgType` int(11) DEFAULT '1' COMMENT '消息类型：文本、……',
+  `EventId` int(11) DEFAULT '1' COMMENT '事件ID： 自定义',
+  `Content` varchar(700) DEFAULT NULL COMMENT '消息内容',
+  `CreateTime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `State` int(11) DEFAULT '1' COMMENT '状态',
+  `ReState` int(11) DEFAULT NULL COMMENT '回复状态',
+  `WeiMsgId` varchar(50) DEFAULT NULL COMMENT '微信消息ID',
+  `UserId` int(11) DEFAULT NULL COMMENT '用户表主键',
+  PRIMARY KEY (`UserMsgId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户消息记录表';

@@ -1,0 +1,175 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AircraftDataAnalysisModel2.WinRT", "AircraftDataAnalysisModel2.WinRT\AircraftDataAnalysisModel2.WinRT.csproj", "{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hub", "Hub", "{A1DC91F7-7C77-4E58-97A7-9A5F9B85AD0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{1F480643-F0D0-42D5-8679-3F7C0496BF08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7D741B66-BD35-4223-8CCA-8E2A7DF94832}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{EC908690-F963-4F6E-94AB-7DD33690FDC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightDataEntities", "..\AircraftDataAnalysisService\FlightDataEntities\FlightDataEntities.csproj", "{EBDCE0B9-BCBE-404D-8769-C877050DF55B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AircraftDataAnalysisWcfService", "..\AircraftDataAnalysisService\AircraftDataAnalysisWcfService\AircraftDataAnalysisWcfService.csproj", "{8F235995-5621-4A33-8178-3000DA73E64D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightDataEntitiesRT", "..\AircraftDataAnalysisService\FlightDataEntitiesRT\FlightDataEntitiesRT.csproj", "{FD796CD2-5869-446F-A92C-93EE311C0EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickFlyParam", "..\AircraftDataAnalysisService\FlyParaPro\QuickFlyParam\QuickFlyParam.csproj", "{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPlot", "..\AircraftDataAnalysisService\FlyParaPro\Nplot\NPlot.csproj", "{C7884B89-8BC2-4567-9D4F-06B91F78E24B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyParamBusiness", "..\AircraftDataAnalysisService\FlyParaPro\FlyParamBusiness\FlyParamBusiness.csproj", "{1B4A95FE-B387-434E-98A3-CE811FE2BC85}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://42.96.198.241:8080/tfs/pstudio
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AircraftDataAnalysisModel2.WinRT\\AircraftDataAnalysisModel2.WinRT.csproj
+		SccProjectTopLevelParentUniqueName1 = AircraftDataAnalysisModel2.sln
+		SccProjectName1 = AircraftDataAnalysisModel2.WinRT
+		SccLocalPath1 = AircraftDataAnalysisModel2.WinRT
+		SccProjectUniqueName2 = ..\\AircraftDataAnalysisService\\FlightDataEntities\\FlightDataEntities.csproj
+		SccProjectTopLevelParentUniqueName2 = AircraftDataAnalysisModel2.sln
+		SccProjectName2 = ../AircraftDataAnalysisService/FlightDataEntities
+		SccLocalPath2 = ..\\AircraftDataAnalysisService\\FlightDataEntities
+		SccProjectUniqueName3 = ..\\AircraftDataAnalysisService\\AircraftDataAnalysisWcfService\\AircraftDataAnalysisWcfService.csproj
+		SccProjectTopLevelParentUniqueName3 = AircraftDataAnalysisModel2.sln
+		SccProjectName3 = ../AircraftDataAnalysisService/AircraftDataAnalysisWcfService
+		SccLocalPath3 = ..\\AircraftDataAnalysisService\\AircraftDataAnalysisWcfService
+		SccProjectUniqueName4 = ..\\AircraftDataAnalysisService\\FlightDataEntitiesRT\\FlightDataEntitiesRT.csproj
+		SccProjectTopLevelParentUniqueName4 = AircraftDataAnalysisModel2.sln
+		SccProjectName4 = ../AircraftDataAnalysisService/FlightDataEntitiesRT
+		SccLocalPath4 = ..\\AircraftDataAnalysisService\\FlightDataEntitiesRT
+		SccProjectUniqueName5 = ..\\AircraftDataAnalysisService\\FlyParaPro\\QuickFlyParam\\QuickFlyParam.csproj
+		SccProjectTopLevelParentUniqueName5 = AircraftDataAnalysisModel2.sln
+		SccProjectName5 = ../AircraftDataAnalysisService/FlyParaPro/QuickFlyParam
+		SccLocalPath5 = ..\\AircraftDataAnalysisService\\FlyParaPro\\QuickFlyParam
+		SccProjectUniqueName6 = ..\\AircraftDataAnalysisService\\FlyParaPro\\Nplot\\NPlot.csproj
+		SccProjectTopLevelParentUniqueName6 = AircraftDataAnalysisModel2.sln
+		SccProjectName6 = ../AircraftDataAnalysisService/FlyParaPro/Nplot
+		SccLocalPath6 = ..\\AircraftDataAnalysisService\\FlyParaPro\\Nplot
+		SccProjectUniqueName7 = ..\\AircraftDataAnalysisService\\FlyParaPro\\FlyParamBusiness\\FlyParamBusiness.csproj
+		SccProjectTopLevelParentUniqueName7 = AircraftDataAnalysisModel2.sln
+		SccProjectName7 = ../AircraftDataAnalysisService/FlyParaPro/FlyParamBusiness
+		SccLocalPath7 = ..\\AircraftDataAnalysisService\\FlyParaPro\\FlyParamBusiness
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|ARM.Build.0 = Debug|ARM
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|ARM.Deploy.0 = Debug|ARM
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|x64.ActiveCfg = Debug|x64
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|x64.Build.0 = Debug|x64
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|x64.Deploy.0 = Debug|x64
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|x86.ActiveCfg = Debug|x86
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|x86.Build.0 = Debug|x86
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Debug|x86.Deploy.0 = Debug|x86
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|ARM.ActiveCfg = Release|ARM
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|ARM.Build.0 = Release|ARM
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|ARM.Deploy.0 = Release|ARM
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|x64.ActiveCfg = Release|x64
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|x64.Build.0 = Release|x64
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|x64.Deploy.0 = Release|x64
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|x86.ActiveCfg = Release|x86
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|x86.Build.0 = Release|x86
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B}.Release|x86.Deploy.0 = Release|x86
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Release|x64.ActiveCfg = Release|Any CPU
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B}.Release|x86.ActiveCfg = Release|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Release|x64.ActiveCfg = Release|Any CPU
+		{8F235995-5621-4A33-8178-3000DA73E64D}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|ARM.Build.0 = Debug|ARM
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|x64.ActiveCfg = Debug|x64
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|x64.Build.0 = Debug|x64
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|x86.ActiveCfg = Debug|x86
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Debug|x86.Build.0 = Debug|x86
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|ARM.ActiveCfg = Release|ARM
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|ARM.Build.0 = Release|ARM
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|x64.ActiveCfg = Release|x64
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|x64.Build.0 = Release|x64
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|x86.ActiveCfg = Release|x86
+		{FD796CD2-5869-446F-A92C-93EE311C0EED}.Release|x86.Build.0 = Release|x86
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|ARM.ActiveCfg = Release|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|x64.ActiveCfg = Release|Any CPU
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B}.Release|x86.ActiveCfg = Release|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2FED218B-B98C-4B03-B2FB-1352EEFA1D0B} = {EC908690-F963-4F6E-94AB-7DD33690FDC4}
+		{8F235995-5621-4A33-8178-3000DA73E64D} = {A1DC91F7-7C77-4E58-97A7-9A5F9B85AD0F}
+		{EBDCE0B9-BCBE-404D-8769-C877050DF55B} = {1F480643-F0D0-42D5-8679-3F7C0496BF08}
+		{FD796CD2-5869-446F-A92C-93EE311C0EED} = {1F480643-F0D0-42D5-8679-3F7C0496BF08}
+		{6A437B0E-3750-492D-B00F-B7E9A66E7FEC} = {7D741B66-BD35-4223-8CCA-8E2A7DF94832}
+		{C7884B89-8BC2-4567-9D4F-06B91F78E24B} = {7D741B66-BD35-4223-8CCA-8E2A7DF94832}
+		{1B4A95FE-B387-434E-98A3-CE811FE2BC85} = {7D741B66-BD35-4223-8CCA-8E2A7DF94832}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>动漫-首页</title>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/model.css" rel="stylesheet" type="text/css" />
+<style>
+#app-center .app-right {
+	width: 246px;
+	height: 564px;
+	overflow: hidden;
+	border-left: 1px solid #e5e5e5;
+	background: #fff;
+}
+#app-center .app-right .pad {
+	padding: 14px 15px;
+}
+#app-center .app-right .dim-code {
+	display: inline-block;
+	margin: 0px auto;
+	padding: 8px;
+	width: 132px;
+	height: 132px;
+	overflow: hidden;
+	border: 1px solid #e6e6e6;
+	background: #fdfdfd;
+}
+#app-center .app-right .brief p {
+	margin-bottom: 6px;
+}
+#app-center .app-right .brief span {
+	display: inline-block;
+	color: #909090;
+	width: 48px;
+}
+#app-center .app-right .title {
+	display: inline-block;
+	background: #91abc7;
+	line-height: 24px;
+	padding: 0px 7px;
+	color: #fff;
+}
+#app-center .app-right .apps li {
+	width: 58px;
+	float: left;
+	margin-right: 16px;
+}
+#app-center .app-middle {
+	height: 564px;
+	overflow: hidden;
+	background: #f7f7f7;
+	width: 753px;
+}
+#app-center .app-middle .pad {
+	padding: 22px;
+}
+#app-center .app-middle .app-info .img {
+	width: 81px;
+	height: 81px;
+	overflow: hidden;
+	margin: 0px 23px 0px 18px;
+}
+#app-center .app-middle .app-info .abo {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+#app-center .app-middle .app-info .abo a {
+	display: block;
+	background: url(images/130x26x90.png) no-repeat;
+	width: 60px;
+	height: 26px;
+	float: left;
+	margin-left: 10px;
+}
+#app-center .app-middle .app-info .abo .in {
+	background-position: -70px 0px;
+}
+#app-center .app-middle .app-info .info {
+	width: 577px;
+}
+#app-center .app-middle .app-info .info .flip {
+	background: url(images/5x3x90.png) no-repeat right center;
+	padding-right: 8px;
+	color: #0477d9;
+}
+#app-center .app-middle .app-info .info .panel {
+	height: 66px;
+	overflow: hidden;
+}
+#app-center .app-middle .app-pic li {
+	width: 225px;
+	height: 375px;
+	overflow: hidden;
+	margin-left: 8px;
+	float: left;
+}
+#app-center .app-middle .app-pic {
+	background: #fff;
+	border-left: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+	padding: 1px;
+}
+#app-center .app-middle .app-pic .bg {
+background:(linear, 0 0, 0 8%, from(#fff), to(#f8f8f8));
+	padding: 9px 0px;
+	overflow: hidden;
+}
+#app-center .thesearch .back {
+	background: url(images/18x16x90.png) no-repeat;
+	display: block;
+	width: 18px;
+	height: 16px;
+	margin-left: 22px;
+}
+#app-center .app-middle .app-pic .relative {
+	height: 375px;
+}
+#app-center .app-middle .app-pic ul {
+	position: absolute;
+}
+#app-center .app-middle .app-pic .back a, #app-center .app-middle .app-pic .front a {
+	background: url(images/44x98x90.png) no-repeat;
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: opx;
+	top: 165px;
+	z-index: 1000;
+}
+#app-center .app-middle .app-pic .back a {
+	left: 8px;
+}
+#app-center .app-middle .app-pic .front a {
+	right: 6px;
+	background-position: 0px -54px;
+}
+#app-center .thesearch .reflash {
+	background: url(images/17x17x90.png) no-repeat;
+	display: block;
+	width: 17px;
+	height: 17px;
+	margin-left: 27px;
+}
+#app-center .lh22 {
+	line-height: 22px;
+}
+#app-center .fz12b {
+	font-size: 12px;
+	font-weight: bold;
+}
+#app-center .fz16b {
+	font-size: 16px;
+	font-weight: bold;
+}
+#app-center .mr0 {
+	margin-right: 0px !important;
+}
+#app-center .c999999 {
+	color: #999;
+}
+#app-center .btm {
+	border-bottom: 1px solid #e5e5e5;
+}
+#app-center .star, #app-center .star-l {
+	background: url(images/91x38x90.png) no-repeat;
+	width: 91px;
+	height: 14px;
+}
+#app-center .star-l {
+	background-position: 0px -24px;
+}
+#app-center>.thesearch{width: 1000px;}
+#app-center>.thesearch a{margin-top: 14px;}
+</style>
+<script>
+$(function(){
+$("#app-center .flip").click(function(){
+   if($("#app-center .panel").height() > 66){
+	$("#app-center .panel").css("height","66")}
+	 else{
+	$("#app-center .panel").css("height","auto")} 
+  });
+});
+
+$(function(){
+	var len=$('#app-center .app-pic li').length;
+	var liw=$('#app-center .app-pic li').width();
+	var ulw=(liw+8)*len;
+	var index=0;
+	var itew=(liw+8)*3;
+	var lilen=Math.ceil(len/3);
+	
+	$('#app-center .app-pic ul').width(ulw);
+	$('#app-center .app-pic .front a').click(function(){
+		index++;
+		if(index>lilen-1) {index=lilen-1; $(this).addClass('dis');}
+		$('#app-center .app-pic ul').animate({'left':-index*itew},375);
+	});
+	$('#app-center .app-pic .back a').click(function(){
+
+		index--;
+		if(index<0) {index=0; $(this).addClass('dis');}
+		$('#app-center .app-pic ul').animate({'left':-index*(liw+8)*3},375);
+	});
+});
+
+</script>
+</head>
+<body>
+<div class="main" id="app-center">
+  <div class="thesearch"> <a href="#" class="fl back"></a> <a href="#" class="fl reflash"></a>
+    <div class="thesearchr fr">
+      <input name="" class="gosearch" type="text" value="搜索应用">
+      <input class="goforsearch" type="submit" value="" name="sub">
+    </div>
+  </div>
+  <div class="fr app-right content_2 content">
+    <div class="pad">
+      <div class="t-center fz18">
+        <p class="fz18">快来扫二维码吧！</p>
+        <p class="mt5">
+        <div class="dim-code"> <img src="images/132x132x90.png"> </div>
+        </p>
+      </div>
+      <div class="star mb15 mt15">
+        <div class="star-l" style="width:50%;"></div>
+      </div>
+      <div class="brief">
+        <p><span >分&nbsp;&nbsp;类：</span>阅读</p>
+        <p><span >更&nbsp;&nbsp;新：</span>2013-08-05</p>
+        <p><span >下&nbsp;&nbsp;载：</span>2559</p>
+        <p><span >系&nbsp;&nbsp;统：</span>android2.3以上</p>
+        <p><span >开发商：</span>网易</p>
+        <p><span >分&nbsp;&nbsp;小：</span>3.99MB</p>
+        <p><span >语&nbsp;&nbsp;言：</span>阅读</p>
+        <p><span >收&nbsp;&nbsp;费：</span>阅读</p>
+      </div>
+      <div class="btm mt20"> <span class="fl title">推荐应用</span> <span class="fr lh24 c999999">换一换</span>
+        <div class="clear"></div>
+      </div>
+      <div class="apps mt10">
+        <ul>
+          <li>
+            <p><img src="images/58x58x90.png"></p>
+            <p class="t-center">墨迹天气</p>
+          </li>
+          <li>
+            <p><img src="images/58x58x90.png"></p>
+            <p class="t-center">墨迹天气</p>
+          </li>
+          <li class="mr0">
+            <p><img src="images/58x58x90.png"></p>
+            <p class="t-center">墨迹天气</p>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fr content_2 content app-middle">
+    <div class="pad">
+      <div class="app-info relative">
+        <div class="abo"> <a href="#"></a> <a href="#" class="in"></a> </div>
+        <div class="fl img"><img src="images/81x81x90.png"></div>
+        <div class="fl info">
+          <p><span class="fz16b">网易公开课</span> <span class="fz14">v1.2.2</span>
+          <p class="fz12b mt10">应用简介：</p>
+          <p class="lh22 mt5 panel">网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。网易公开课Android客户端，是网易为爱学习的网友打造的“随时随地上名校公开课”的免费课程平台。它以哈
+            佛、耶鲁、牛津、剑桥等“全球名校视频公开课”为内容资源，结合稳重的界面设计和人性化的操作，实现您与
+            名校真正零距离接触，无成本、无障碍地了解世界前沿的新知、新思。</p>
+          <a href="#" class="fr flip mt10">展开</a> </div>
+        <div class="clear"></div>
+      </div>
+      <div class="app-pic mt20">
+        <div class="bg">
+          <style>
+
+		</style>
+          <div class="relative" style="height:375px;">
+            <div class="back"><a href="#"></a></div>
+            <div class="front"><a href="#"></a></div>
+            <ul>
+              <li><img src="images/225x375x90.png"></li>
+              <li><img src="images/225x375x90.png"></li>
+              <li><img src="images/225x375x90.png"></li>
+              <li><img src="images/225x375x90.png"></li>
+              <li><img src="images/225x375x90.png"></li>
+              <li><img src="images/225x375x90.png"></li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--搜索列表-->
+    <ul class="searchlist">
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ</span>
+            <span class="spanr"></span>
+         </li>
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ2013</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ浏览器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ输入法</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ斗地主</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ音乐</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ播放器</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ皮肤</span>
+            <span class="spanr"></span>
+         </li> 
+         <li>
+         	<span class="spanl"></span>
+            <span class="spanm">QQ四国象棋</span>
+            <span class="spanr"></span>
+         </li>  
+         <p><input type="image" src="images/136x22x1.jpg" width="136" height="22" /></p>      	
+    </ul>
+</div>
+</body>
+</html>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/model.js"></script>

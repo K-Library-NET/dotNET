@@ -1,0 +1,124 @@
+﻿@model IEnumerable<WXStudio.EFModel.Entities.DataMgt.SaleBook>
+
+@{
+    ViewBag.Title = "预约管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>预约管理</h2>
+
+<p>
+    <a href="~/SaleBooks/ExportCSV" class="siteButton">导出到Excel</a>
+    @*@Html.ActionLink("导出", "Export")*@
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.SalesmanId)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.WXCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WXNickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ViewConfirmStateString)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyConfirmStateString)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyUnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Column1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Column2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Column3)
+        </th>
+        @*<th>
+                    @Html.DisplayNameFor(model => model.Column1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Column2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Column3)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyId)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.SalesmanId)
+                </td>*@
+            @Html.HiddenFor(modelItem => item.SalesmanId)
+            <td>
+                @Html.DisplayFor(modelItem => item.WXCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WXNickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewConfirmStateString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyConfirmStateString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyUnit)
+            </td>
+            @*<td>
+                        @Html.DisplayFor(modelItem => item.Column1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Column2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Column3)
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyId)
+                </td>*@
+            @Html.HiddenFor(modelItem => item.Column1)
+            @Html.HiddenFor(modelItem => item.Column2)
+            @Html.HiddenFor(modelItem => item.Column3)
+            @Html.HiddenFor(modelItem => item.CompanyId)
+
+            <td>
+                @Html.ActionLink("看楼确认", "ViewConfirm", new { id = item.SaleBookId }) |
+                @Html.ActionLink("买楼确认", "BuyConfirm", new { id = item.SaleBookId }) |
+                @Html.ActionLink("编辑", "Edit", new { id = item.SaleBookId }) |
+                @Html.ActionLink("删除", "Delete", new { id = item.SaleBookId })
+            </td>
+        </tr>
+    }
+
+</table>

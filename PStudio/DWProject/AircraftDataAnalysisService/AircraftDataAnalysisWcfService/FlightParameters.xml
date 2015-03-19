@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlightParameters BytesCount="1024">
+  <Parameter ParameterID="Et" ParameterDataType="Int32" Index="1"
+             SubIndex="-1" Caption="飞行时间"  Unit="秒">
+    <Byte Index="1"/>
+  </Parameter>
+  <Parameter ParameterID="Hp" ParameterDataType="Single" Index="2"
+             SubIndex="-1" Caption="气压高度"  Unit="" >
+    <Byte Index="128"/>
+    <Byte Index="256"/>
+  </Parameter>
+  <Parameter ParameterID="Vi" ParameterDataType="Single" Index="3"
+             SubIndex="-1" Caption="指示空速"  Unit="" >
+    <Byte Index="54"/>
+  </Parameter>
+  <Parameter ParameterID="M" ParameterDataType="Single" Index="4"
+             SubIndex="-1" Caption="马赫数"  Unit="">
+    <Byte Index="56"/>
+  </Parameter>
+  <Parameter ParameterID="aT" ParameterDataType="Single" Index="5"
+             SubIndex="-1" Caption="真攻角"  Unit="">
+    <Byte Index="22"/>
+    <Byte Index="86"/>
+    <Byte Index="150"/>
+    <Byte Index="214"/>
+  </Parameter>
+  <Parameter ParameterID="Vy" ParameterDataType="Single" Index="6"
+             SubIndex="-1" Caption="升降速度"  Unit="">
+    <Byte Index="126"/>
+    <Byte Index="254"/>
+  </Parameter>
+  <Parameter ParameterID="Tt" ParameterDataType="Single" Index="7"
+             SubIndex="-1" Caption="大气总温"  Unit="">
+    <Byte Index="58"/>
+  </Parameter>
+  <Parameter ParameterID="ZH" ParameterDataType="Single" Index="8"
+             SubIndex="-1" Caption="真航向"  Unit="" >
+    <Byte Index="60"/>
+  </Parameter>
+  <Parameter ParameterID="HG" ParameterDataType="Single" Index="9"
+             SubIndex="-1" Caption="倾斜角"  Unit="" >
+    <Byte Index="124"/>
+    <Byte Index="252"/>
+  </Parameter>
+  <Parameter ParameterID="FY" ParameterDataType="Single" Index="10"
+             SubIndex="-1" Caption="俯仰角"  Unit="">
+    <Byte Index="62"/>
+  </Parameter>
+  <Parameter ParameterID="EW" ParameterDataType="Single" Index="11"
+             SubIndex="-1" Caption="纬度"  Unit="" >
+    <Byte Index="33"/>
+  </Parameter>
+  <Parameter ParameterID="NS" ParameterDataType="Single" Index="12"
+             SubIndex="-1" Caption="经度"  Unit="" >
+    <Byte Index="97"/>
+  </Parameter>
+  <Parameter ParameterID="DR" ParameterDataType="Single" Index="13"
+             SubIndex="-1" Caption="偏流角"  Unit="">
+    <Byte Index="24"/>
+    <Byte Index="88"/>
+    <Byte Index="152"/>
+    <Byte Index="216"/>
+  </Parameter>
+  <Parameter ParameterID="GS" ParameterDataType="Single" Index="14"
+             SubIndex="-1" Caption="地速"  Unit="">
+    <Byte Index="26"/>
+    <Byte Index="90"/>
+    <Byte Index="154"/>
+    <Byte Index="218"/>
+  </Parameter>
+  <Parameter ParameterID="Wy" ParameterDataType="Single" Index="15"
+             SubIndex="-1" Caption="俯仰角速度"  Unit="">
+    <Byte Index="122"/>
+  </Parameter>
+  <Parameter ParameterID="Wx" ParameterDataType="Single" Index="16"
+             SubIndex="-1" Caption="横滚角速度"  Unit="" >
+    <Byte Index="51"/>
+    <Byte Index="147"/>
+  </Parameter>
+  <Parameter ParameterID="Wz" ParameterDataType="Single" Index="17"
+             SubIndex="-1" Caption="盘旋角速度"  Unit="" >
+    <Byte Index="250"/>
+  </Parameter>
+  <Parameter ParameterID="KZB" ParameterDataType="Single" Index="18"
+             SubIndex="-1" Caption="纵向状态标志"  Unit="">
+    <Byte Index="3"/>
+    <Byte Index="35"/>
+    <Byte Index="67"/>
+    <Byte Index="99"/>
+    <Byte Index="131"/>
+    <Byte Index="163"/>
+    <Byte Index="195"/>
+    <Byte Index="227"/>
+  </Parameter>
+  <Parameter ParameterID="KCB" ParameterDataType="Single" Index="19"
+             SubIndex="-1" Caption="横向状态标志"  Unit="">
+    <Byte Index="5"/>
+    <Byte Index="37"/>
+    <Byte Index="69"/>
+    <Byte Index="101"/>
+    <Byte Index="133"/>
+    <Byte Index="165"/>
+    <Byte Index="197"/>
+    <Byte Index="229"/>
+  </Parameter>
+  <Parameter ParameterID="ZS" ParameterDataType="Single" Index="20"
+             SubIndex="-1" Caption="平尾伺服器输入"  Unit="">
+    <Byte Index="7"/>
+    <Byte Index="39"/>
+    <Byte Index="71"/>
+    <Byte Index="103"/>
+    <Byte Index="135"/>
+    <Byte Index="167"/>
+    <Byte Index="199"/>
+    <Byte Index="231"/>
+  </Parameter>
+  <Parameter ParameterID="CS" ParameterDataType="Single" Index="21"
+             SubIndex="-1" Caption="副翼伺服器输入"  Unit="" >
+    <Byte Index="9"/>
+    <Byte Index="41"/>
+    <Byte Index="73"/>
+    <Byte Index="105"/>
+    <Byte Index="137"/>
+    <Byte Index="169"/>
+    <Byte Index="201"/>
+    <Byte Index="233"/>
+  </Parameter>
+  <Parameter ParameterID="Ny" ParameterDataType="Single" Index="22"
+             SubIndex="-1" Caption="法向过载"  Unit="" >
+    <Byte Index="20"/>
+    <Byte Index="52"/>
+    <Byte Index="84"/>
+    <Byte Index="116"/>
+    <Byte Index="148"/>
+    <Byte Index="180"/>
+    <Byte Index="212"/>
+    <Byte Index="244"/>
+  </Parameter>
+  <Parameter ParameterID="Nx" ParameterDataType="Single" Index="23"
+             SubIndex="-1" Caption="纵向过载"  Unit="" >
+    <Byte Index="120"/>
+    <Byte Index="248"/>
+  </Parameter>
+  <Parameter ParameterID="Nz" ParameterDataType="Single" Index="24"
+             SubIndex="-1" Caption="侧向过载"  Unit="" >
+    <Byte Index="118"/>
+    <Byte Index="246"/>
+  </Parameter>
+  <Parameter ParameterID="Dx" ParameterDataType="Single" Index="25"
+             SubIndex="-1" Caption="副翼角位移"  Unit="" >
+    <Byte Index="28"/>
+    <Byte Index="92"/>
+    <Byte Index="156"/>
+    <Byte Index="220"/>
+  </Parameter>
+  <Parameter ParameterID="Dy" ParameterDataType="Single" Index="26"
+             SubIndex="-1" Caption="方向舵角位移"  Unit="" >
+    <Byte Index="32"/>
+    <Byte Index="96"/>
+    <Byte Index="160"/>
+    <Byte Index="224"/>
+  </Parameter>
+  <Parameter ParameterID="Dz" ParameterDataType="Single" Index="27"
+             SubIndex="-1" Caption="平尾角位移"  Unit="">
+    <Byte Index="30"/>
+    <Byte Index="94"/>
+    <Byte Index="160"/>
+    <Byte Index="222"/>
+  </Parameter>
+  <Parameter ParameterID="T6L" ParameterDataType="Single" Index="28"
+             SubIndex="-1" Caption="左发排气温度"  Unit="">
+    <Byte Index="40"/>
+  </Parameter>
+  <Parameter ParameterID="T6R" ParameterDataType="Single" Index="29"
+             SubIndex="-1" Caption="右发排气温度"  Unit="">
+    <Byte Index="42"/>
+  </Parameter>
+  <Parameter ParameterID="NHL" ParameterDataType="Single" Index="30"
+             SubIndex="-1" Caption="左发高压转速"  Unit="">
+    <Byte Index="48"/>
+  </Parameter>
+  <Parameter ParameterID="NHR" ParameterDataType="Single" Index="31"
+             SubIndex="-1" Caption="右发高压转速"  Unit="">
+    <Byte Index="46"/>
+  </Parameter>
+
+
+  <Parameter ParameterID="(NULL)" ParameterDataType="Int32" Index="32"
+             SubIndex="1" Caption="开关量16"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="1"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG15" ParameterDataType="Int32" Index="32"
+             SubIndex="2" Caption="失速警告信号"  Unit="">
+    <Byte Index="161">
+      <Bit Index="2"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG14" ParameterDataType="Int32" Index="32"
+             SubIndex="3" Caption="右主电源脱网"  Unit="">
+    <Byte Index="161">
+      <Bit Index="3"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG13" ParameterDataType="Int32" Index="32"
+             SubIndex="4" Caption="左主电源脱网"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="4"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG12" ParameterDataType="Int32" Index="32"
+             SubIndex="5" Caption="右防冰接通"  Unit="">
+    <Byte Index="161">
+      <Bit Index="5"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG11" ParameterDataType="Int32" Index="32"
+             SubIndex="6" Caption="左防冰接通"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="6"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG10" ParameterDataType="Int32" Index="32"
+             SubIndex="7" Caption="后舱盖锁紧"  Unit="">
+    <Byte Index="161">
+      <Bit Index="7"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG9" ParameterDataType="Int32" Index="32"
+             SubIndex="8" Caption="前舱盖锁紧"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="8"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG8" ParameterDataType="Int32" Index="32"
+             SubIndex="9" Caption="襟翼放下35°"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="9"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG7" ParameterDataType="Int32" Index="32"
+             SubIndex="10" Caption="襟翼放下25°"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="10"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG6" ParameterDataType="Int32" Index="32"
+             SubIndex="11" Caption="右起落架放下"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="11"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG5" ParameterDataType="Int32" Index="32"
+             SubIndex="12" Caption="左起落架放下"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="12"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG4" ParameterDataType="Int32" Index="32"
+             SubIndex="13" Caption="助液压系统压降"  Unit="">
+    <Byte Index="161">
+      <Bit Index="13"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG3" ParameterDataType="Int32" Index="32"
+             SubIndex="14" Caption="主液压系统压降"  Unit="">
+    <Byte Index="161">
+      <Bit Index="14"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG2" ParameterDataType="Int32" Index="32"
+             SubIndex="15" Caption="剩油1000kg"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="15"/>
+    </Byte>
+  </Parameter>
+  <Parameter ParameterID="KG1" ParameterDataType="Int32" Index="32"
+             SubIndex="16" Caption="无线电键控"  Unit="" >
+    <Byte Index="161">
+      <Bit Index="16"/>
+    </Byte>
+  </Parameter>
+</FlightParameters>
+

@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PStudio.WXPlatform.Common", "PStudio.WXPlatform.Common\PStudio.WXPlatform.Common.csproj", "{26FBF279-F4B7-4158-BC78-3FB72FACD8A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PStudio.WXPlatform.WXWeb", "PStudio.WXPlatform.WXWeb\PStudio.WXPlatform.WXWeb.csproj", "{35383823-FCE3-4C73-BF88-4FF3DECD73DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PStudio.WXPlatform.CMSWeb", "PStudio.WXPlatform.CMSWeb\PStudio.WXPlatform.CMSWeb.csproj", "{D0A1B815-3C7D-4751-9454-0179EA73DB59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PStudio.WXPlatform.EFModel", "PStudio.WXPlatform.EFModel\PStudio.WXPlatform.EFModel.csproj", "{4B4CFF40-439E-4089-B399-CFBAFD8C0B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PStudio.WXPlatform.WXParser", "PStudio.WXPlatform.WXParser\PStudio.WXPlatform.WXParser.csproj", "{1EF9A539-93FC-4391-AEBD-3487B3A2389B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TEST", "TEST", "{275B106C-D5D8-4E74-B521-A950F516E314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEFModel", "TestEFModel\TestEFModel.csproj", "{731D8547-C2EC-4FAE-B138-2F513AEB0E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestEFModel", "UnitTestEFModel\UnitTestEFModel.csproj", "{7C45335F-28C0-4EF8-A51C-A52C30307F27}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://42.96.198.241:8080/tfs/pstudio
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PStudio.WXPlatform.Common\\PStudio.WXPlatform.Common.csproj
+		SccProjectName1 = PStudio.WXPlatform.Common
+		SccLocalPath1 = PStudio.WXPlatform.Common
+		SccProjectUniqueName2 = PStudio.WXPlatform.WXWeb\\PStudio.WXPlatform.WXWeb.csproj
+		SccProjectName2 = PStudio.WXPlatform.WXWeb
+		SccLocalPath2 = PStudio.WXPlatform.WXWeb
+		SccProjectUniqueName3 = PStudio.WXPlatform.CMSWeb\\PStudio.WXPlatform.CMSWeb.csproj
+		SccProjectName3 = PStudio.WXPlatform.CMSWeb
+		SccLocalPath3 = PStudio.WXPlatform.CMSWeb
+		SccProjectUniqueName4 = PStudio.WXPlatform.EFModel\\PStudio.WXPlatform.EFModel.csproj
+		SccProjectName4 = PStudio.WXPlatform.EFModel
+		SccLocalPath4 = PStudio.WXPlatform.EFModel
+		SccProjectUniqueName5 = PStudio.WXPlatform.WXParser\\PStudio.WXPlatform.WXParser.csproj
+		SccProjectName5 = PStudio.WXPlatform.WXParser
+		SccLocalPath5 = PStudio.WXPlatform.WXParser
+		SccProjectUniqueName6 = TestEFModel\\TestEFModel.csproj
+		SccProjectTopLevelParentUniqueName6 = WXPlatform.sln
+		SccProjectName6 = TestEFModel
+		SccLocalPath6 = TestEFModel
+		SccProjectUniqueName7 = UnitTestEFModel\\UnitTestEFModel.csproj
+		SccProjectTopLevelParentUniqueName7 = WXPlatform.sln
+		SccProjectName7 = UnitTestEFModel
+		SccLocalPath7 = UnitTestEFModel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26FBF279-F4B7-4158-BC78-3FB72FACD8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FBF279-F4B7-4158-BC78-3FB72FACD8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FBF279-F4B7-4158-BC78-3FB72FACD8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FBF279-F4B7-4158-BC78-3FB72FACD8A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35383823-FCE3-4C73-BF88-4FF3DECD73DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35383823-FCE3-4C73-BF88-4FF3DECD73DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35383823-FCE3-4C73-BF88-4FF3DECD73DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35383823-FCE3-4C73-BF88-4FF3DECD73DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A1B815-3C7D-4751-9454-0179EA73DB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A1B815-3C7D-4751-9454-0179EA73DB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A1B815-3C7D-4751-9454-0179EA73DB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A1B815-3C7D-4751-9454-0179EA73DB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B4CFF40-439E-4089-B399-CFBAFD8C0B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4CFF40-439E-4089-B399-CFBAFD8C0B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4CFF40-439E-4089-B399-CFBAFD8C0B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4CFF40-439E-4089-B399-CFBAFD8C0B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF9A539-93FC-4391-AEBD-3487B3A2389B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF9A539-93FC-4391-AEBD-3487B3A2389B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF9A539-93FC-4391-AEBD-3487B3A2389B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF9A539-93FC-4391-AEBD-3487B3A2389B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731D8547-C2EC-4FAE-B138-2F513AEB0E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731D8547-C2EC-4FAE-B138-2F513AEB0E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731D8547-C2EC-4FAE-B138-2F513AEB0E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731D8547-C2EC-4FAE-B138-2F513AEB0E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C45335F-28C0-4EF8-A51C-A52C30307F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C45335F-28C0-4EF8-A51C-A52C30307F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C45335F-28C0-4EF8-A51C-A52C30307F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C45335F-28C0-4EF8-A51C-A52C30307F27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{731D8547-C2EC-4FAE-B138-2F513AEB0E03} = {275B106C-D5D8-4E74-B521-A950F516E314}
+		{7C45335F-28C0-4EF8-A51C-A52C30307F27} = {275B106C-D5D8-4E74-B521-A950F516E314}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{253670AC-3C55-4E67-91D2-E8FE0DBD56F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WXStudio.Framework.WeixinHelper</RootNamespace>
+    <AssemblyName>WXStudio.Framework.WeixinHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\SubClickBLL.cs" />
+    <Compile Include="BLL\TextBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="ContentReceiver.cs" />
+    <Compile Include="ContentSender.cs" />
+    <Compile Include="Model\RCodeNotSub.cs" />
+    <Compile Include="Model\RCodeSub.cs" />
+    <Compile Include="Model\RImg.cs" />
+    <Compile Include="Model\RLink.cs" />
+    <Compile Include="Model\RLocation.cs" />
+    <Compile Include="Model\RMenuClick.cs" />
+    <Compile Include="Model\RMenuView.cs" />
+    <Compile Include="Model\RSub.cs" />
+    <Compile Include="Model\RSubLocation.cs" />
+    <Compile Include="Model\RText.cs" />
+    <Compile Include="Model\RUnsub.cs" />
+    <Compile Include="Model\RVideo.cs" />
+    <Compile Include="Model\RVoice.cs" />
+    <Compile Include="Model\SImg.cs" />
+    <Compile Include="Model\Smusic.cs" />
+    <Compile Include="Model\SNews.cs" />
+    <Compile Include="Model\SText.cs" />
+    <Compile Include="Model\SVideo.cs" />
+    <Compile Include="Model\SVoice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WXStudio.Framework.Unity\WXStudio.Framework.Unity.csproj">
+      <Project>{78905395-4b34-4fab-b254-53de06d892dc}</Project>
+      <Name>WXStudio.Framework.Unity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>注册完成</title>
+</head>
+<body>
+    <div>
+        <h2>注册完成！推荐步骤完成如下</h2>
+        <br />
+        <h3>1、打开的下面链接“我的销售地址”。</h3>
+        <h3>2、点击进入详情页。</h3>
+        <h3>3、点击“右上角”详情，选择发送给朋友或分享到朋友圈。</h3>
+        <a href="@Html.Encode(TempData["myurl"])">我的销售地址
+        </a>
+        <br />
+        <a href="@Html.Encode(TempData["mycodeimg"])">我的销售二维码</a>
+        <h4 style="color:red;font-weight:bold">请务必在注册成功后需要保存二维码图片，操作方法，点击“我的销售二维码”打开图片，长按图片弹出对话框，保存到手机即可。</h4>      
+        @*<img src="~/QRCode/13690876551.jpg" />*@
+        @*<img src="~/QRCode/13690876553.jpg" />*@
+
+    </div>
+</body>
+</html>

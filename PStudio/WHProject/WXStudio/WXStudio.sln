@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Reference", "01 Reference", "{879A20CC-35D7-4B94-A9FE-D38D7D8EA4FF}"
+	ProjectSection(SolutionItems) = preProject
+		Reference\BarcodeLib.dll = Reference\BarcodeLib.dll
+		Reference\Gma.QrCodeNet.Encoding.dll = Reference\Gma.QrCodeNet.Encoding.dll
+		..\..\Downloads\ThoughtWorks.QRCode.dll = ..\..\Downloads\ThoughtWorks.QRCode.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Framework", "02 Framework", "{7CECBD44-3FD3-4293-B5A3-DB2B8EC45881}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 EFModel", "03 EFModel", "{376162B4-4365-44F4-A790-85242E1940A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 ConfigMgt", "04 ConfigMgt", "{9DD74484-CCFC-4327-872E-34DDEC8F59E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 DataMgt", "05 DataMgt", "{E9552557-433A-4FE6-82CD-8883BCD85FC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WXStudio.Framework.Unity", "WXStudio.Framework.Unity\WXStudio.Framework.Unity.csproj", "{78905395-4B34-4FAB-B254-53DE06D892DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WXStudio.Framework.WeixinHelper", "WXStudio.Framework.WeixinHelper\WXStudio.Framework.WeixinHelper.csproj", "{253670AC-3C55-4E67-91D2-E8FE0DBD56F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WXStudio.EFModel.Entities", "WXStudio.EFModel.Entities\WXStudio.EFModel.Entities.csproj", "{1515EE45-48BD-4386-9219-C0D391051C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFModel.TestEFModel", "EFModel.TestEFModel\EFModel.TestEFModel.csproj", "{F55B3DC3-CFCB-4C09-8854-DB446155BED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WXStudio.ConfigMgt.Web", "WXStudio.ConfigMgt.Web\WXStudio.ConfigMgt.Web.csproj", "{D846F5E9-7400-4F9D-B436-C781E71D93E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WXStudio.DataMgt.Web", "WXStudio.DataMgt.Web\WXStudio.DataMgt.Web.csproj", "{ED4CB38E-615C-48F5-8E86-EAE004E1665B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://42.96.198.241:8080/tfs/pstudio
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WXStudio.Framework.Unity\\WXStudio.Framework.Unity.csproj
+		SccProjectTopLevelParentUniqueName1 = WXStudio.sln
+		SccProjectName1 = WXStudio.Framework.Unity
+		SccLocalPath1 = WXStudio.Framework.Unity
+		SccProjectUniqueName2 = WXStudio.Framework.WeixinHelper\\WXStudio.Framework.WeixinHelper.csproj
+		SccProjectTopLevelParentUniqueName2 = WXStudio.sln
+		SccProjectName2 = WXStudio.Framework.WeixinHelper
+		SccLocalPath2 = WXStudio.Framework.WeixinHelper
+		SccProjectUniqueName3 = WXStudio.EFModel.Entities\\WXStudio.EFModel.Entities.csproj
+		SccProjectTopLevelParentUniqueName3 = WXStudio.sln
+		SccProjectName3 = WXStudio.EFModel.Entities
+		SccLocalPath3 = WXStudio.EFModel.Entities
+		SccProjectUniqueName4 = EFModel.TestEFModel\\EFModel.TestEFModel.csproj
+		SccProjectTopLevelParentUniqueName4 = WXStudio.sln
+		SccProjectName4 = EFModel.TestEFModel
+		SccLocalPath4 = EFModel.TestEFModel
+		SccProjectUniqueName5 = WXStudio.ConfigMgt.Web\\WXStudio.ConfigMgt.Web.csproj
+		SccProjectTopLevelParentUniqueName5 = WXStudio.sln
+		SccProjectName5 = WXStudio.ConfigMgt.Web
+		SccLocalPath5 = WXStudio.ConfigMgt.Web
+		SccProjectUniqueName6 = WXStudio.DataMgt.Web\\WXStudio.DataMgt.Web.csproj
+		SccProjectTopLevelParentUniqueName6 = WXStudio.sln
+		SccProjectName6 = WXStudio.DataMgt.Web
+		SccLocalPath6 = WXStudio.DataMgt.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78905395-4B34-4FAB-B254-53DE06D892DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78905395-4B34-4FAB-B254-53DE06D892DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78905395-4B34-4FAB-B254-53DE06D892DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78905395-4B34-4FAB-B254-53DE06D892DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253670AC-3C55-4E67-91D2-E8FE0DBD56F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253670AC-3C55-4E67-91D2-E8FE0DBD56F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253670AC-3C55-4E67-91D2-E8FE0DBD56F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253670AC-3C55-4E67-91D2-E8FE0DBD56F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1515EE45-48BD-4386-9219-C0D391051C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1515EE45-48BD-4386-9219-C0D391051C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1515EE45-48BD-4386-9219-C0D391051C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1515EE45-48BD-4386-9219-C0D391051C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F55B3DC3-CFCB-4C09-8854-DB446155BED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F55B3DC3-CFCB-4C09-8854-DB446155BED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F55B3DC3-CFCB-4C09-8854-DB446155BED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F55B3DC3-CFCB-4C09-8854-DB446155BED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D846F5E9-7400-4F9D-B436-C781E71D93E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D846F5E9-7400-4F9D-B436-C781E71D93E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D846F5E9-7400-4F9D-B436-C781E71D93E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D846F5E9-7400-4F9D-B436-C781E71D93E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4CB38E-615C-48F5-8E86-EAE004E1665B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4CB38E-615C-48F5-8E86-EAE004E1665B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4CB38E-615C-48F5-8E86-EAE004E1665B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4CB38E-615C-48F5-8E86-EAE004E1665B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78905395-4B34-4FAB-B254-53DE06D892DC} = {7CECBD44-3FD3-4293-B5A3-DB2B8EC45881}
+		{253670AC-3C55-4E67-91D2-E8FE0DBD56F9} = {7CECBD44-3FD3-4293-B5A3-DB2B8EC45881}
+		{1515EE45-48BD-4386-9219-C0D391051C08} = {376162B4-4365-44F4-A790-85242E1940A0}
+		{F55B3DC3-CFCB-4C09-8854-DB446155BED4} = {376162B4-4365-44F4-A790-85242E1940A0}
+		{D846F5E9-7400-4F9D-B436-C781E71D93E2} = {9DD74484-CCFC-4327-872E-34DDEC8F59E6}
+		{ED4CB38E-615C-48F5-8E86-EAE004E1665B} = {E9552557-433A-4FE6-82CD-8883BCD85FC9}
+	EndGlobalSection
+EndGlobal

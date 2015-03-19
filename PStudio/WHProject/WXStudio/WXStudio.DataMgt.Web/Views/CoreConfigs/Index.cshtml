@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WXStudio.EFModel.Entities.Core.CoreConfig>
+
+@{
+    ViewBag.Title = "配置设置";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>系统配置项列表</h2>
+
+@*<p>
+    @Html.ActionLink("新建配置项", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Key)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Key)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Value)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.CoreConfigId }) |
+            @Html.ActionLink("明细", "Details", new { id=item.CoreConfigId }) |
+            @*@Html.ActionLink("删除", "Delete", new { id=item.CoreConfigId })*@
+        </td>
+    </tr>
+}
+
+</table>

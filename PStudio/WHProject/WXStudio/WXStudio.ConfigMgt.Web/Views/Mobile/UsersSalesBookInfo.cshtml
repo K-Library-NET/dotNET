@@ -1,0 +1,150 @@
+﻿@model WXStudio.EFModel.Entities.DataMgt.SaleBook
+
+@{
+    ViewBag.Title = "预约买楼";
+}
+
+<a href="http://42.96.198.241/mobile.php?act=channel&name=index&weid=4#">官微首页</a>
+<h2>预约买楼</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>预约登记</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div>         
+               <p style="color: red">在填写销售人员/销售人员电话/渠道信息时，需要注明来源，若无请填写“无”。</p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Column1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Column1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Column1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Column2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Column2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Column2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Column3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Column3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Column3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BuyUnit, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BuyUnit, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BuyUnit, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="买楼登记" class="btn btn-primary btn-lg" />               
+            </div>
+        </div>
+        <div>
+            <p>(优惠、配套、位置)更多内容↓↓↓</p>
+        </div>
+
+        <h3>优惠活动</h3>
+
+        <div>
+            <p>
+                <span style="TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 28px; LETTER-SPACING: normal; DISPLAY: inline !important; FONT: 14px/24px arial, 宋体, sans-serif; WHITE-SPACE: normal; FLOAT: none; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+                    金开大道墅区高层联发瞰青105#于9月20日盛大开盘，现推出66套套内约65㎡两房，64套77㎡两房变三房，33套96㎡正三房，33套117㎡三房变四房精品房源。抢搜房网“一口价”团购房，10天倒计时火热报名中，建面单价5771/㎡封顶。限时优惠，限量疯抢。办卡可享两房交1万5抵6万元/三房交2万抵8万元团购优惠。更有免息首付分期。所有优惠折扣仅限开盘当天使用。报名时间：9月6日-9月19日，报名地点：联发瞰青销售中心。（地址：重庆市北部新区金开大道1666号联发瞰青售房部）
+                </span>
+            </p>
+        </div>
+        <div>
+            <img src="~/Resource/Images/4efbf319d0ace.jpg"
+                 id="bannerPic">
+        </div>
+        <div>
+            <h3>
+                楼盘简介
+            </h3>
+            <p><span style="TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 28px; LETTER-SPACING: normal; DISPLAY: inline !important; FONT: 14px/24px arial, 宋体, sans-serif; WHITE-SPACE: normal; FLOAT: none; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">联发瞰青，位于两江新区核心板块——北部新区金开大道。项目拥有近50亩的天然湖面，周边拥有100多亩体育公园及300多亩森林公园，整体生态环境优异，轻轨三号线就在家门口。区域价值和自然资源条件决定了项目具备打造高品质居住社区的潜力。</span></p>
+        </div>
+
+
+
+        <div>
+            <h3>
+                交通配套
+            </h3>
+            <div>
+                <p>
+                    社区配套：联发集团在高层的东面打造了一个110亩的体育公园，里面有游泳池、篮球场、足球场、网球场、羽毛球场等众多体育设施，让您不仅可以在家门口得到身体的锻炼，也是和一家人共同娱乐的空间。
+                </p>
+                <p>
+                    园林：此外5万平米的园林景观用一个亿来打造，平均一平米的造价为2000元（一般高端房地产园林景观造价在1000元-1500元），人均可享受到的绿地为150平米，这在业界都算是奢侈之举。
+                </p>
+                <p>
+                    交通：轻轨3号线直达，位于长福、翠云轻轨站两站点中间。
+                </p>
+                <p>
+                    教育配套：项目享有一站式教育配套，社区内配套有一个中港英华幼儿园。翠云小学就在项目附近，鸳鸯育才中学为重庆市重点中学与本项目仅有5分钟车程。
+                </p>
+                <p>
+                    休闲：在项目里我们还建造了三大奢侈会所：游艇会所---是重庆首个游艇会所,就是我们现在营销中心所以的位置；法式红酒酒窖---位于体育公园的旁边，是由我们联发集团的建发酒业重金所打造，该酒窑作为顶级酒文化体验及商务会所，集体验、品鉴、销售、会所等功能为一体，是目前国内最具特色的恒温、恒湿酒窑，收藏了包括拉菲、加拿大北海岸冰酒等世界顶级名酒；独栋商业生活体验会所，这也是区别于其他项目的单一会所，满足了业主养身SPA等高端生活配套。这些高端别墅才能享受的顶级配套使联发湖光天地真正成为高层中的稀缺品。
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3>
+                位置
+            </h3>
+            <img src="~/Resource/Images/map.jpg"
+                 id="bannerPic">
+        </div>
+        <hr />
+
+        @*<div>
+            <input type="button" value="楼盘相册" class="btn btn-primary btn-lg" onclick="window.location = 'http://42.96.198.241/mobile.php?act=channel&name=index&weid=4#'" />
+            <input type="button" value="360全景" class="btn btn-primary btn-lg" />
+        </div>*@
+
+        <div>
+            <a href="tel:02363073666" style="font-weight:bold;color:red;font-size: 18px">详询电话:023-63073666</a>
+        </div>
+
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

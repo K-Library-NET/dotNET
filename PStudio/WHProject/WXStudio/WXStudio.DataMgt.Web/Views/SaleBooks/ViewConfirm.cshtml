@@ -1,0 +1,101 @@
+﻿@model WXStudio.EFModel.Entities.DataMgt.SaleBook
+
+@{
+    ViewBag.Title = "看楼确认";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>预约管理</h2>
+
+<div>
+    <h4>看楼确认</h4>
+    <hr />
+    @using (Html.BeginForm("ChangeViewConfirm", "SaleBooks", FormMethod.Post))
+    {
+        @Html.HiddenFor(model => model.SaleBookId)
+        @Html.HiddenFor(model => model.BuyConfirm)
+        @Html.HiddenFor(model => model.Column1)
+        @Html.HiddenFor(model => model.Column2)
+        @Html.HiddenFor(model => model.Column3)
+        @Html.HiddenFor(model => model.CompanyId)
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.WXCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WXNickname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Comments)
+                </th>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.WXCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.WXNickname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Comments)
+                </td>
+            </tr>
+        </table>
+
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalesmanId, "销售人员", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.SalesmanId, ViewData["SalesmanIdEnum"] as SelectList, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SalesmanId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.BuyUnit, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BuyUnit, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BuyUnit, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.ViewConfirm, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ViewConfirm, ViewData["ViewConfirmEnum"] as SelectList, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ViewConfirm, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit"
+                       value="看楼确认" class="btn btn-primary btn-lg" />
+                @*class="btn btn-default" />*@
+            </div>
+        </div>
+    }
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.SaleBookId }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>
+
+
